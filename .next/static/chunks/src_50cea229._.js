@@ -3270,12 +3270,12 @@ const PartnerWithUs = ()=>{
                                     children: "Partnership Program"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                    lineNumber: 14,
+                                    lineNumber: 13,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                lineNumber: 13,
+                                lineNumber: 12,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -3284,7 +3284,7 @@ const PartnerWithUs = ()=>{
                                     "Partner With Us For ",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                        lineNumber: 19,
+                                        lineNumber: 18,
                                         columnNumber: 35
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3292,7 +3292,7 @@ const PartnerWithUs = ()=>{
                                         children: "Exclusive Offers"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                        lineNumber: 20,
+                                        lineNumber: 19,
                                         columnNumber: 15
                                     }, this),
                                     " &",
@@ -3302,13 +3302,13 @@ const PartnerWithUs = ()=>{
                                         children: "Exciting Benefits..!"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                        lineNumber: 23,
+                                        lineNumber: 22,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                lineNumber: 18,
+                                lineNumber: 17,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3316,7 +3316,7 @@ const PartnerWithUs = ()=>{
                                 children: "Join our elite network of partners and unlock premium benefits including higher commissions, priority bookings, and marketing support."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                lineNumber: 25,
+                                lineNumber: 24,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3342,17 +3342,17 @@ const PartnerWithUs = ()=>{
                                                             d: "M5 13l4 4L19 7"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                            lineNumber: 42,
+                                                            lineNumber: 41,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                        lineNumber: 35,
+                                                        lineNumber: 34,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                    lineNumber: 34,
+                                                    lineNumber: 33,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3362,7 +3362,7 @@ const PartnerWithUs = ()=>{
                                                             children: "Increased Visibility"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                            lineNumber: 51,
+                                                            lineNumber: 50,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3370,19 +3370,19 @@ const PartnerWithUs = ()=>{
                                                             children: "Get featured in our premium partner listings"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                            lineNumber: 54,
+                                                            lineNumber: 53,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                    lineNumber: 50,
+                                                    lineNumber: 49,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                            lineNumber: 33,
+                                            lineNumber: 32,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3403,17 +3403,17 @@ const PartnerWithUs = ()=>{
                                                             d: "M5 13l4 4L19 7"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                            lineNumber: 68,
+                                                            lineNumber: 67,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                        lineNumber: 61,
+                                                        lineNumber: 60,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                    lineNumber: 60,
+                                                    lineNumber: 59,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3423,7 +3423,7 @@ const PartnerWithUs = ()=>{
                                                             children: "Higher Commissions"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                            lineNumber: 77,
+                                                            lineNumber: 76,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3431,19 +3431,19 @@ const PartnerWithUs = ()=>{
                                                             children: "Earn up to 25% more than standard partners"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                            lineNumber: 80,
+                                                            lineNumber: 79,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                    lineNumber: 76,
+                                                    lineNumber: 75,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                            lineNumber: 59,
+                                            lineNumber: 58,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3464,17 +3464,17 @@ const PartnerWithUs = ()=>{
                                                             d: "M5 13l4 4L19 7"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                            lineNumber: 94,
+                                                            lineNumber: 93,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                        lineNumber: 87,
+                                                        lineNumber: 86,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                    lineNumber: 86,
+                                                    lineNumber: 85,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3484,7 +3484,7 @@ const PartnerWithUs = ()=>{
                                                             children: "Dedicated Support"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                            lineNumber: 103,
+                                                            lineNumber: 102,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3492,36 +3492,36 @@ const PartnerWithUs = ()=>{
                                                             children: "24/7 priority assistance for premium partners"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                            lineNumber: 106,
+                                                            lineNumber: 105,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                    lineNumber: 102,
+                                                    lineNumber: 101,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                            lineNumber: 85,
+                                            lineNumber: 84,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                    lineNumber: 32,
+                                    lineNumber: 31,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                lineNumber: 31,
+                                lineNumber: 30,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                        lineNumber: 12,
+                        lineNumber: 11,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3533,7 +3533,7 @@ const PartnerWithUs = ()=>{
                                     className: "p-0.5 bg-gradient-to-r from-red-500 via-red-600 to-red-500"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                    lineNumber: 119,
+                                    lineNumber: 118,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3556,13 +3556,13 @@ const PartnerWithUs = ()=>{
                                                                         children: "*"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                        lineNumber: 128,
+                                                                        lineNumber: 126,
                                                                         columnNumber: 37
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                lineNumber: 127,
+                                                                lineNumber: 125,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -3571,7 +3571,7 @@ const PartnerWithUs = ()=>{
                                                                 placeholder: "Your Name"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                lineNumber: 130,
+                                                                lineNumber: 128,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3588,23 +3588,23 @@ const PartnerWithUs = ()=>{
                                                                         d: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                        lineNumber: 142,
+                                                                        lineNumber: 140,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                    lineNumber: 136,
+                                                                    lineNumber: 134,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                lineNumber: 135,
+                                                                lineNumber: 133,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                        lineNumber: 126,
+                                                        lineNumber: 124,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3619,13 +3619,13 @@ const PartnerWithUs = ()=>{
                                                                         children: "*"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                        lineNumber: 155,
+                                                                        lineNumber: 153,
                                                                         columnNumber: 31
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                lineNumber: 154,
+                                                                lineNumber: 152,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -3634,7 +3634,7 @@ const PartnerWithUs = ()=>{
                                                                 placeholder: "Your Email"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                lineNumber: 157,
+                                                                lineNumber: 155,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3651,23 +3651,23 @@ const PartnerWithUs = ()=>{
                                                                         d: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                        lineNumber: 169,
+                                                                        lineNumber: 167,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                    lineNumber: 163,
+                                                                    lineNumber: 161,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                lineNumber: 162,
+                                                                lineNumber: 160,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                        lineNumber: 153,
+                                                        lineNumber: 151,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3682,13 +3682,13 @@ const PartnerWithUs = ()=>{
                                                                         children: "*"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                        lineNumber: 182,
+                                                                        lineNumber: 180,
                                                                         columnNumber: 39
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                lineNumber: 181,
+                                                                lineNumber: 179,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -3697,7 +3697,7 @@ const PartnerWithUs = ()=>{
                                                                 placeholder: "+91 (___) ___-____"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                lineNumber: 184,
+                                                                lineNumber: 182,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3714,23 +3714,23 @@ const PartnerWithUs = ()=>{
                                                                         d: "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                        lineNumber: 196,
+                                                                        lineNumber: 194,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                    lineNumber: 190,
+                                                                    lineNumber: 188,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                lineNumber: 189,
+                                                                lineNumber: 187,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                        lineNumber: 180,
+                                                        lineNumber: 178,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3745,13 +3745,13 @@ const PartnerWithUs = ()=>{
                                                                         children: "*"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                        lineNumber: 209,
+                                                                        lineNumber: 207,
                                                                         columnNumber: 38
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                lineNumber: 208,
+                                                                lineNumber: 206,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -3760,7 +3760,7 @@ const PartnerWithUs = ()=>{
                                                                 placeholder: "Vehicle Name"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                lineNumber: 211,
+                                                                lineNumber: 209,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3777,23 +3777,23 @@ const PartnerWithUs = ()=>{
                                                                         d: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                        lineNumber: 223,
+                                                                        lineNumber: 221,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                    lineNumber: 217,
+                                                                    lineNumber: 215,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                lineNumber: 216,
+                                                                lineNumber: 214,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                        lineNumber: 207,
+                                                        lineNumber: 205,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3808,13 +3808,13 @@ const PartnerWithUs = ()=>{
                                                                         children: "*"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                        lineNumber: 236,
+                                                                        lineNumber: 234,
                                                                         columnNumber: 30
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                lineNumber: 235,
+                                                                lineNumber: 233,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -3823,7 +3823,7 @@ const PartnerWithUs = ()=>{
                                                                 placeholder: "Your City"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                lineNumber: 238,
+                                                                lineNumber: 236,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3841,7 +3841,7 @@ const PartnerWithUs = ()=>{
                                                                             d: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                            lineNumber: 250,
+                                                                            lineNumber: 248,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -3851,24 +3851,24 @@ const PartnerWithUs = ()=>{
                                                                             d: "M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                            lineNumber: 256,
+                                                                            lineNumber: 254,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                    lineNumber: 244,
+                                                                    lineNumber: 242,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                lineNumber: 243,
+                                                                lineNumber: 241,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                        lineNumber: 234,
+                                                        lineNumber: 232,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3883,22 +3883,21 @@ const PartnerWithUs = ()=>{
                                                                         children: "*"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                        lineNumber: 269,
+                                                                        lineNumber: 267,
                                                                         columnNumber: 33
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                lineNumber: 268,
+                                                                lineNumber: 266,
                                                                 columnNumber: 23
                                                             }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                                 className: "w-full px-4 py-1.5 bg-white bg-opacity-70 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all duration-300 placeholder-gray-500 shadow-sm hover:shadow-md",
-                                                                placeholder: "Your Business Address",
-                                                                rows: 1
+                                                                placeholder: "Address"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                lineNumber: 271,
+                                                                lineNumber: 269,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3915,29 +3914,29 @@ const PartnerWithUs = ()=>{
                                                                         d: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                        lineNumber: 283,
+                                                                        lineNumber: 281,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                    lineNumber: 277,
+                                                                    lineNumber: 275,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                                lineNumber: 276,
+                                                                lineNumber: 274,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                        lineNumber: 267,
+                                                        lineNumber: 265,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                lineNumber: 124,
+                                                lineNumber: 122,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3947,45 +3946,45 @@ const PartnerWithUs = ()=>{
                                                     children: "Submit"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                    lineNumber: 296,
+                                                    lineNumber: 294,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                                lineNumber: 295,
+                                                lineNumber: 293,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                        lineNumber: 123,
+                                        lineNumber: 121,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/PartnerWithUs.jsx",
-                                    lineNumber: 121,
+                                    lineNumber: 120,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/PartnerWithUs.jsx",
-                            lineNumber: 117,
+                            lineNumber: 116,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/PartnerWithUs.jsx",
-                        lineNumber: 116,
+                        lineNumber: 115,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/PartnerWithUs.jsx",
-                lineNumber: 10,
+                lineNumber: 9,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/PartnerWithUs.jsx",
-            lineNumber: 9,
+            lineNumber: 8,
             columnNumber: 7
         }, this)
     }, void 0, false, {

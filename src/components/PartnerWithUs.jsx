@@ -5,7 +5,6 @@ import React from "react";
 const PartnerWithUs = () => {
   return (
     <section className="relative py-16">
-    
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Left Content */}
@@ -119,7 +118,6 @@ const PartnerWithUs = () => {
               <div className="p-0.5 bg-gradient-to-r from-red-500 via-red-600 to-red-500"></div>
 
               <div className="px-8 py-8">
-
                 <form className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Vendor Name */}
@@ -268,10 +266,10 @@ const PartnerWithUs = () => {
                       <label className="block text-sm font-semibold text-gray-700 mb-2">
                         Address <span className="text-red-500">*</span>
                       </label>
-                      <textarea
+                      <input
                         className="w-full px-4 py-1.5 bg-white bg-opacity-70 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all duration-300 placeholder-gray-500 shadow-sm hover:shadow-md"
-                        placeholder="Your Business Address"
-                        rows={1}
+                        placeholder="Address"
+                        // rows={1}
                       />
                       <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none top-5">
                         <svg
