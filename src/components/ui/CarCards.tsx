@@ -92,10 +92,11 @@ const CarCards: React.FC<CarCardsProps> = ({ car }) => {
       </div>
 
       {/* Button */}
+      <div className='flex justify-center'>
       <div className="p-6 pt-0">
         <button
           onClick={handleViewDetails}
-          className="group relative w-full inline-flex items-center justify-center px-6 py-3 font-bold text-white rounded-lg bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 shadow-lg shadow-red-500/30 hover:shadow-red-500/40 transition-all duration-300 hover:-translate-y-0.5"
+          className="cursor-pointer text-xs btn-shadow-red"
         >
           <span className="relative flex items-center gap-2">
             View Details
@@ -103,7 +104,7 @@ const CarCards: React.FC<CarCardsProps> = ({ car }) => {
               viewBox="0 0 24 24"
               stroke="currentColor"
               fill="none"
-              className="w-5 h-5 transform transition-transform group-hover:translate-x-1"
+              className="w-5 h-5 transform transition-transform group-hover:translate-x-4"
             >
               <path
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
@@ -114,7 +115,7 @@ const CarCards: React.FC<CarCardsProps> = ({ car }) => {
             </svg>
           </span>
         </button>
-      </div>
+      </div></div>
     </div>
   );
 };

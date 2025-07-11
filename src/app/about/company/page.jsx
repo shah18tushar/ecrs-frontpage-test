@@ -47,7 +47,7 @@ export default function AboutPage () {
       </section>
 
       {/* Main Content */}
-      <div className="-mt-10 px-4 sm:px-6 lg:px-8">
+      <div className="-mt-10 px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-4xl mx-auto">
           {/* Company Overview */}
           <section
@@ -99,9 +99,9 @@ export default function AboutPage () {
             ].map ((stat, idx) => (
               <div
                 key={idx}
-                className="bg-white text-center p-6 rounded-xl border shadow-sm hover:shadow-md transition duration-300"
+                className="bg-white hover:bg-red-50 hover:border-red-400 text-center p-6 rounded-xl border shadow-sm hover:shadow-md transition duration-300"
               >
-                <h3 className="text-4xl font-bold text-red-600 mb-2">
+                <h3 className="text-3xl font-bold text-red-600 mb-2">
                   {stat.title}
                 </h3>
                 <p className="text-gray-700 font-medium">{stat.desc}</p>

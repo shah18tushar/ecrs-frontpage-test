@@ -40,9 +40,11 @@ export const DriverForm = () => {
         </div>
       </div>
 
-      <button type="submit" className="btn-shadow-red">
-        <span>📨</span> Send
-      </button>
+      <div className="flex justify-center">
+        <button type="submit" className="btn-shadow-red cursor-pointer text-xs">
+          Submit Enquiry
+        </button>
+      </div>
     </form>
   );
 };

@@ -102,9 +102,10 @@ const Blogs = () => {
                             <p className="text-gray-600 mb-4">{blog.description}</p>
 
                             {/* CTA */}
-                            <button className="mt-auto text-red-600 hover:underline font-medium">
-                                Read More →
-                            </button>
+                            <div className='flex justify-center'>
+                            <button className="cursor-pointer text-xs btn-shadow-red">
+                                Read More
+                            </button></div>
                         </div>
                     ))}
                 </div>

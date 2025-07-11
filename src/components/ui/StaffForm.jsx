@@ -36,12 +36,11 @@ export const StaffForm = () => {
         </div>
       </div>
 
-      <button
-        type="submit"
-        className="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700 flex items-center gap-2"
-      >
-        <span>📨</span> Send
-      </button>
+      <div className="flex justify-center">
+        <button type="submit" className="btn-shadow-red cursor-pointer text-xs">
+          Submit Enquiry
+        </button>
+      </div>
     </form>
   );
 };

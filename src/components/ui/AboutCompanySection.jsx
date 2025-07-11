@@ -26,7 +26,7 @@ export default function AboutCompanySection () {
         {/* Center Logo */}
         <div className="flex flex-col items-center gap-4">
           <Image
-            src="/logo_steering.png" // Replace with your central logo
+            src="/ECRS_Logo.png" // Replace with your central logo
             alt="ECRS Logo"
             width={180}
             height={180}
@@ -53,14 +53,14 @@ export default function AboutCompanySection () {
       {/* Section 2: Center Quote */}
       <div className="bg-black py-8 px-6 text-center rounded-xl text-white text-xl font-medium italic relative">
         <div className="text-red-600 text-3xl mb-4">”</div>
-        The organizers know that the Leadership does not only mean Dominance but also being Responsible and
-        Being Owner of the work one does.
+        The organizers know that the Leadership does not only mean Dominance but
+        also being Responsible and Being Owner of the work one does.
       </div>
 
       {/* Section 3: Our Servicer */}
       <div className="grid md:grid-cols-2 gap-8 items-center">
         <Image
-          src="/about/handshake.jpg"
+          src="/about-us.jpg"
           alt="Handshake"
           width={500}
           height={400}
@@ -77,15 +77,16 @@ export default function AboutCompanySection () {
             Economical | Efficient | Dependable
           </p>
           <p className="text-gray-600 mb-6">
-            At M/S Executive Car Rental Services, we conduct weekly staff meetings and emphasize continuous improvement through:
+            At M/S Executive Car Rental Services, we conduct weekly staff
+            meetings and emphasize continuous improvement through:
           </p>
           <ul className="space-y-3">
             {[
-              'Customer requirements',
-              'Quality objectives',
-              'Statutory, legal and regulatory requirements',
-              'Continuous improvement in goals',
-            ].map ((point, idx) => (
+              "Customer requirements",
+              "Quality objectives",
+              "Statutory, legal and regulatory requirements",
+              "Continuous improvement in goals",
+            ].map((point, idx) => (
               <li key={idx} className="flex items-center gap-2 text-gray-700">
                 <CheckCircle className="w-5 h-5 text-red-600" />
                 {point}
@@ -94,14 +95,13 @@ export default function AboutCompanySection () {
           </ul>
         </div>
       </div>
-
     </div>
   );
 }
 
 const InfoBlock = ({icon, title, desc}) => (
   <div className="flex items-start gap-3">
-    <div className="p-2 bg-red-100 rounded-full">{icon}</div>
+    <div className="p-2">{icon}</div>
     <div>
       <h4 className="text-lg font-semibold text-gray-800">{title}</h4>
       <p className="text-sm text-gray-600">{desc}</p>

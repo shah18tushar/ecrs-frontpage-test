@@ -19,8 +19,8 @@ export default function BookOnline () {
         duration={0.6}
         ease="power3.out"
         splitType="chars"
-        from={{opacity: 0, y: 30}}
-        to={{opacity: 1, y: 0}}
+        from={{ opacity: 0, y: 30 }}
+        to={{ opacity: 1, y: 0 }}
         threshold={0.1}
       />
 
@@ -28,7 +28,7 @@ export default function BookOnline () {
         {/* Left Image */}
         <div className="hidden lg:block">
           <Image
-            src="/0a4b909d-fdd2-4120-bf61-25a95cb35a74.png"
+            src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Cars"
             width={800}
             height={600}
@@ -40,14 +40,14 @@ export default function BookOnline () {
         <div className="p-6 sm:p-10 w-full">
           <Tabs
             tabs={[
-              {id: 'corporate', name: 'Corporate', icon: Building2},
-              {id: 'personal', name: 'Personal', icon: User},
+              { id: "corporate", name: "Corporate", icon: Building2 },
+              { id: "personal", name: "Personal", icon: User },
             ]}
             activeTab={activeTab}
             setActiveTab={setActiveTab}
           />
 
-          {activeTab === 'personal' &&
+          {activeTab === "personal" && (
             <form className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
               {/* Personal Form */}
               <input
@@ -105,15 +105,16 @@ export default function BookOnline () {
               </div>
 
               <div className="col-span-2 text-center">
-                <button className="btn-shadow-red">
+                <button className="btn-shadow-red text-xs cursor-pointer">
                   <span className="flex items-center gap-2">
-                    <CalendarIcon className="w-4 h-4" /> Send
+                    Submit Enquiry
                   </span>
                 </button>
               </div>
-            </form>}
+            </form>
+          )}
 
-          {activeTab === 'corporate' &&
+          {activeTab === "corporate" && (
             <form className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
               {/* Corporate Form */}
               <input
@@ -161,13 +162,14 @@ export default function BookOnline () {
               </div>
 
               <div className="col-span-2 text-center">
-                <buttom className="btn-shadow-red">
+                <buttom className="btn-shadow-red text-xs cursor-pointer">
                   <span className="flex items-center gap-2">
-                    <CalendarIcon className="w-4 h-4" /> Send
+                    Submit Enquiry
                   </span>
                 </buttom>
               </div>
-            </form>}
+            </form>
+          )}
         </div>
       </div>
     </div>

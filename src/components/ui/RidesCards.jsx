@@ -132,7 +132,7 @@ export const RidesCards = ({car}) => {
               </p>
             </div>
           </div>
-          <button className="btn-shadow-red">
+          <button className="btn-shadow-red gap-2 text-xs cursor-pointer">
             <Car size={16} />
             Book Now
           </button>

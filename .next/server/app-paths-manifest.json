@@ -1,17 +1,8 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
   "/about/company/page": "app/about/company/page.js",
-  "/about/howitworks/page": "app/about/howitworks/page.js",
-  "/about/howwecare/page": "app/about/howwecare/page.js",
-  "/about/ournetwork/page": "app/about/ournetwork/page.js",
-  "/bookonline/page": "app/bookonline/page.js",
   "/blogs/page": "app/blogs/page.js",
-  "/cancellationpolicy/page": "app/cancellationpolicy/page.js",
   "/careers/page": "app/careers/page.js",
   "/gallery/page": "app/gallery/page.js",
-  "/contactus/page": "app/contactus/page.js",
-  "/page": "app/page.js",
-  "/rides/page": "app/rides/page.js",
-  "/privacypolicy/page": "app/privacypolicy/page.js",
-  "/termsconditions/page": "app/termsconditions/page.js"
+  "/page": "app/page.js"
 }

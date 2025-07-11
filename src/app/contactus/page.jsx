@@ -124,7 +124,7 @@ export default function ContactPage () {
               />
               <div className="md:col-span-2 flex justify-center">
                 <button type="submit" className="btn-shadow-red">
-                  Send
+                  Submit
                 </button>
               </div>
             </form>
