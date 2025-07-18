@@ -5,331 +5,6 @@
 
 var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
-// "use client";
-// import React, { useEffect, useRef, useState } from "react";
-// import {
-//   ChevronRight,
-//   ChevronDown,
-//   Car,
-// } from "lucide-react";
-// const Hero = () => {
-//   const [currentSlide, setCurrentSlide] = useState(0);
-//   const [isVisible, setIsVisible] = useState(false);
-//   const [selectedVehicle, setSelectedVehicle] = useState("");
-//   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-//   const heroRef = useRef(null);
-//   const dropdownRef = useRef(null);
-//   const heroSlides = [
-//     {
-//       image:
-//         "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-//       title: "Luxury Redefined",
-//       subtitle: "Experience Premium Car Rentals",
-//       description:
-//         "From Mercedes to BMW, discover our fleet of luxury vehicles designed for the most discerning travelers.",
-//     },
-//     {
-//       image:
-//         "https://images.unsplash.com/photo-1617531653332-bd46c24f2068?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-//       subtitle: "Electric Future",
-//       title: "Sustainable Luxury",
-//       description:
-//         "Leading the way with our new electric vehicle fleet, combining luxury with environmental responsibility.",
-//     },
-//     {
-//       image:
-//         "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-//       subtitle: "Corporate Excellence",
-//       title: "Widely Endorsed",
-//       description:
-//         "Professional transportation solutions tailored for businesses across Pune and Pan-India locations.",
-//     },
-//   ];
-//   const vehicleOptions = [
-//     { value: "sedan", label: "Sedan" },
-//     { value: "xuv", label: "XUV" },
-//     { value: "premium", label: "Premium" },
-//     { value: "bus", label: "Bus" },
-//   ];
-//   useEffect(() => {
-//     setIsVisible(true);
-//     const timer = setInterval(() => {
-//       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-//     }, 5000);
-//     return () => clearInterval(timer);
-//   }, []);
-//   useEffect(() => {
-//     if (!isDropdownOpen) return;
-//     function handleClickOutside(event) {
-//       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-//         setIsDropdownOpen(false);
-//       }
-//     }
-//     document.addEventListener("mousedown", handleClickOutside);
-//     return () => document.removeEventListener("mousedown", handleClickOutside);
-//   }, [isDropdownOpen]);
-//   return (
-//     <div className="relative h-[99.9vh] overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-900">
-//       {/* Background Images with Parallax Effect */}
-//       <div className="absolute inset-0">
-//         {heroSlides.map((slide, index) => (
-//           <div
-//             key={index}
-//             className={`absolute inset-0 transition-opacity duration-1000 ${
-//               index === currentSlide ? "opacity-100" : "opacity-0"
-//             }`}
-//           >
-//             <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/60 to-transparent z-10" />
-//             <div className="absolute inset-0 z-20" />
-//             <img
-//               src={slide.image}
-//               alt={slide.title}
-//               className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-[3000ms]"
-//             />
-//           </div>
-//         ))}
-//       </div>
-//       {/* Main Content */}
-//       <div className="relative z-40 min-h-screen flex items-center pt-20">
-//         <div className="container mx-auto px-6 lg:px-8">
-//           <div className="grid lg:grid-cols-2 gap-8 items-center">
-//             {/* Left Content */}
-//             <div className="space-y-8">
-//               {/* Badge */}
-//               <div
-//                 className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/20 border border-red-500/30 backdrop-blur-sm text-red-400 text-sm font-medium transform transition-all duration-700 ${
-//                   isVisible
-//                     ? "translate-y-0 opacity-100"
-//                     : "translate-y-8 opacity-0"
-//                 }`}
-//               >
-//                 <div className="w-2 h-2 bg-red-600 rounded-full animate-pulse" />
-//                 {heroSlides[currentSlide].subtitle}
-//               </div>
-//               {/* Main Heading */}
-//               <div className="space-y-4">
-//                 <h1
-//                   className={`text-5xl md:text-5xl font-bold text-white leading-tight transform transition-all duration-1000 delay-200 ${
-//                     isVisible
-//                       ? "translate-y-0 opacity-100"
-//                       : "translate-y-12 opacity-0"
-//                   }`}
-//                 >
-//                   {heroSlides[currentSlide].title
-//                     .split(" ")
-//                     .map((word, index) => (
-//                       <span
-//                         key={index}
-//                         className={index === 1 ? "text-red-500" : ""}
-//                       >
-//                         {word}{" "}
-//                       </span>
-//                     ))}
-//                 </h1>
-//                 <p
-//                   className={`text-xl text-gray-300 leading-relaxed max-w-2xl transform transition-all duration-1000 delay-300 ${
-//                     isVisible
-//                       ? "translate-y-0 opacity-100"
-//                       : "translate-y-8 opacity-0"
-//                   }`}
-//                 >
-//                   {heroSlides[currentSlide].description}
-//                 </p>
-//               </div>
-//               {/* CTA Buttons */}
-//               <div className="mt-6 flex gap-4">
-//                 <button className="px-6 py-2 rounded-lg font-semibold bg-transparent border border-white text-white hover:bg-white/80 cursor-pointer hover:text-black hover:shadow-white/60 hover:shadow-lg transition-all duration-300 hover:scale-105">
-//                   Contact Us
-//                 </button>
-//               </div>
-//             </div>
-//             {/* Right Content - Floating Card */}
-//             <div
-//               className={`lg:ml-8 transform transition-all duration-1000 delay-500 ${
-//                 isVisible
-//                   ? "translate-x-0 opacity-100"
-//                   : "translate-x-12 opacity-0"
-//               }`}
-//             >
-//               <div className="relative">
-//                 {/* Floating Card */}
-//                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/40 shadow-2xl hover:shadow-red-500/20 max-w-md mx-auto">
-//                   <div className="space-y-4">
-//                     <div className="flex items-center gap-3">
-//                       <div className="bg-red-600 p-2 rounded-full">
-//                         <Car className="w-7 h-7 text-white" />
-//                       </div>
-//                       <div>
-//                         <h3 className="text-sm font-semibold tracking-wide text-white">
-//                           Book a Ride
-//                         </h3>
-//                         <p className="text-white/70 text-xs font-medium">
-//                           Economical | Efficient | Dependable
-//                         </p>
-//                       </div>
-//                     </div>
-//                     <div className="space-y-3">
-//                       <div className="grid grid-cols-2 gap-2">
-//                         <div>
-//                           <label className="block text-xs font-medium text-gray-300 mb-1">
-//                             Guest Name
-//                           </label>
-//                           <input
-//                             type="text"
-//                             className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-//                           />
-//                         </div>
-//                         <div>
-//                           <label className="block text-xs font-medium text-gray-300 mb-1">
-//                             Email Address
-//                           </label>
-//                           <input
-//                             type="text"
-//                             className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-//                           />
-//                         </div>
-//                       </div>
-//                       <div className="grid grid-cols-2 gap-2">
-//                         <div>
-//                           <label className="block text-xs font-medium text-gray-300 mb-1">
-//                             Phone Number
-//                           </label>
-//                           <input
-//                             type="text"
-//                             className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-//                           />
-//                         </div>
-//                         <div>
-//                           <label className="block text-xs font-medium text-gray-300 mb-1">
-//                             Pickup Location
-//                           </label>
-//                           <input
-//                             type="text"
-//                             className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-//                           />
-//                         </div>
-//                       </div>
-//                       <div className="grid grid-cols-2 gap-2">
-//                         <div>
-//                           <label className="block text-xs font-medium text-gray-300 mb-1">
-//                             Destination
-//                           </label>
-//                           <input
-//                             type="text"
-//                             className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-//                           />
-//                         </div>
-//                         <div className="relative">
-//                           <label className="block text-xs font-medium text-gray-300 mb-1">
-//                             Vehicle Selection
-//                           </label>
-//                           <div className="relative" ref={dropdownRef}>
-//                             <button
-//                               type="button"
-//                               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-//                               className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent flex items-center justify-between"
-//                             >
-//                               <span
-//                                 className={
-//                                   selectedVehicle
-//                                     ? "text-white"
-//                                     : "text-gray-400"
-//                                 }
-//                               >
-//                                 {selectedVehicle || "Select Vehicle"}
-//                               </span>
-//                               <ChevronDown
-//                                 className={`w-3 h-3 transition-transform duration-200 ${
-//                                   isDropdownOpen ? "rotate-180" : ""
-//                                 }`}
-//                               />
-//                             </button>
-//                             {isDropdownOpen && (
-//                               <div className="absolute top-full left-0 right-0 mt-1 bg-red-600 border border-white/20 rounded-lg shadow-lg z-50">
-//                                 {vehicleOptions.map((option) => (
-//                                   <button
-//                                     key={option.value}
-//                                     type="button"
-//                                     onClick={() => {
-//                                       setSelectedVehicle(option.label);
-//                                       setIsDropdownOpen(false);
-//                                     }}
-//                                     className="w-full px-3 py-2 text-xs text-left text-white hover:bg-white/10 first:rounded-t-lg last:rounded-b-lg transition-colors duration-200"
-//                                   >
-//                                     {option.label}
-//                                   </button>
-//                                 ))}
-//                               </div>
-//                             )}
-//                           </div>
-//                         </div>
-//                       </div>
-//                       <div className="grid grid-cols-2 gap-2">
-//                         <div>
-//                           <label className="block text-xs font-medium text-gray-300 mb-1">
-//                             Date
-//                           </label>
-//                           <input
-//                             type="date"
-//                             className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-//                           />
-//                         </div>
-//                         <div>
-//                           <label className="block text-xs font-medium text-gray-300 mb-1">
-//                             Time
-//                           </label>
-//                           <input
-//                             type="time"
-//                             className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-//                           />
-//                         </div>
-//                       </div>
-//                       <div className="flex justify-center">
-//                         <button className="btn-shadow-red text-xs font-semibold cursor-pointer">
-//                           Submit
-//                         </button>
-//                       </div>
-//                     </div>
-//                   </div>
-//                 </div>
-//                 {/* Floating Elements */}
-//                 <div className="absolute -top-4 -right-4 w-16 h-16 bg-red-500/30 rounded-full blur-xl animate-pulse" />
-//                 <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-red-500/20 rounded-full blur-lg animate-pulse delay-1000" />
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//       {/* Slide Indicators */}
-//       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-50">
-//         <div className="flex gap-3">
-//           {heroSlides.map((_, index) => (
-//             <button
-//               key={index}
-//               onClick={() => setCurrentSlide(index)}
-//               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-//                 index === currentSlide
-//                   ? "bg-red-500 w-8"
-//                   : "bg-white/30 hover:bg-white/50"
-//               }`}
-//             />
-//           ))}
-//         </div>
-//       </div>
-//       {/* Scroll Indicator */}
-//       <div className="absolute bottom-8 right-8 z-50">
-//         <div className="flex flex-col items-center gap-2 text-white/60">
-//           <span className="text-sm font-medium rotate-90 origin-center">
-//             Scroll
-//           </span>
-//           <div className="w-px h-12 bg-gradient-to-b from-white/60 to-transparent" />
-//           <ChevronRight className="w-4 h-4 rotate-90" />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-// export default Hero;
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
@@ -369,7 +44,7 @@ const Hero = ()=>{
                 className: "w-4 h-4"
             }, void 0, false, {
                 fileName: "[project]/src/components/Hero.jsx",
-                lineNumber: 413,
+                lineNumber: 49,
                 columnNumber: 45
             }, this)
         },
@@ -380,7 +55,7 @@ const Hero = ()=>{
                 className: "w-4 h-4"
             }, void 0, false, {
                 fileName: "[project]/src/components/Hero.jsx",
-                lineNumber: 414,
+                lineNumber: 50,
                 columnNumber: 41
             }, this)
         },
@@ -391,7 +66,7 @@ const Hero = ()=>{
                 className: "w-4 h-4"
             }, void 0, false, {
                 fileName: "[project]/src/components/Hero.jsx",
-                lineNumber: 418,
+                lineNumber: 54,
                 columnNumber: 13
             }, this)
         },
@@ -402,7 +77,7 @@ const Hero = ()=>{
                 className: "w-4 h-4"
             }, void 0, false, {
                 fileName: "[project]/src/components/Hero.jsx",
-                lineNumber: 420,
+                lineNumber: 56,
                 columnNumber: 41
             }, this)
         }
@@ -439,7 +114,7 @@ const Hero = ()=>{
         isDropdownOpen
     ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "relative h-[99.9vh] overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-900",
+        className: "relative lg:h-[100vh] overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-900",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute inset-0",
@@ -450,7 +125,7 @@ const Hero = ()=>{
                                 className: "absolute inset-0 z-20"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Hero.jsx",
-                                lineNumber: 454,
+                                lineNumber: 90,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -459,18 +134,18 @@ const Hero = ()=>{
                                 className: "w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-[3000ms] brightness-[0.9]"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Hero.jsx",
-                                lineNumber: 455,
+                                lineNumber: 91,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, index, true, {
                         fileName: "[project]/src/components/Hero.jsx",
-                        lineNumber: 447,
+                        lineNumber: 83,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/components/Hero.jsx",
-                lineNumber: 445,
+                lineNumber: 81,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -487,31 +162,31 @@ const Hero = ()=>{
                                         className: "absolute -top-10 -left-10 w-24 h-24 bg-red-500/10 rounded-full blur-xl animate-pulse"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Hero.jsx",
-                                        lineNumber: 470,
+                                        lineNumber: 106,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "absolute bottom-0 -right-10 w-20 h-20 bg-red-500/5 rounded-full blur-lg animate-pulse delay-1000"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Hero.jsx",
-                                        lineNumber: 471,
+                                        lineNumber: 107,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: `inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/20 border border-red-500/30 backdrop-blur-sm text-red-400 text-sm font-medium transform transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`,
+                                        className: `inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/40 hover:bg-red-500/70 border border-red-500/30 backdrop-blur-sm text-white/70 text-base font-medium transform transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`,
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "w-2 h-2 bg-red-600 rounded-full animate-pulse"
+                                                className: "w-2 h-2 bg-white/70 rounded-full animate-caret-blink mt-0.5"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                lineNumber: 482,
+                                                lineNumber: 118,
                                                 columnNumber: 17
                                             }, this),
                                             heroSlides[currentSlide].subtitle
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Hero.jsx",
-                                        lineNumber: 475,
+                                        lineNumber: 111,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -529,28 +204,28 @@ const Hero = ()=>{
                                                                 className: "absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-red-500 to-transparent"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                                lineNumber: 507,
+                                                                lineNumber: 143,
                                                                 columnNumber: 29
                                                             }, this)
                                                         ]
                                                     }, index, true, {
                                                         fileName: "[project]/src/components/Hero.jsx",
-                                                        lineNumber: 499,
+                                                        lineNumber: 135,
                                                         columnNumber: 25
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                lineNumber: 495,
+                                                lineNumber: 131,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Hero.jsx",
-                                            lineNumber: 488,
+                                            lineNumber: 124,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Hero.jsx",
-                                        lineNumber: 487,
+                                        lineNumber: 123,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -568,51 +243,51 @@ const Hero = ()=>{
                                                                 className: "w-5 h-5"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                                lineNumber: 538,
+                                                                lineNumber: 174,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Hero.jsx",
-                                                            lineNumber: 537,
+                                                            lineNumber: 173,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/Hero.jsx",
-                                                    lineNumber: 535,
+                                                    lineNumber: 171,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     className: "absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-x-full group-hover:translate-x-full"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Hero.jsx",
-                                                    lineNumber: 541,
+                                                    lineNumber: 177,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Hero.jsx",
-                                            lineNumber: 534,
+                                            lineNumber: 170,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Hero.jsx",
-                                        lineNumber: 527,
+                                        lineNumber: 163,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Hero.jsx",
-                                lineNumber: 468,
+                                lineNumber: 104,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: `lg:ml-8 transform transition-all duration-1000 delay-500 ${isVisible ? "translate-x-0 opacity-100" : "translate-x-12 opacity-0"}`,
+                                className: `lg:ml-8 mt-1 transform transition-all duration-1000 delay-500 ${isVisible ? "translate-x-0 opacity-100" : "translate-x-12 opacity-0"}`,
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "relative",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/40 shadow-2xl hover:shadow-red-500/20 max-w-md mx-auto",
+                                            className: "bg-white/10 backdrop-blur-xl rounded-2xl p-4 border border-white/40 shadow-2xl hover:shadow-red-500/20 max-w-md mx-auto",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "space-y-4",
                                                 children: [
@@ -625,12 +300,12 @@ const Hero = ()=>{
                                                                     className: "w-7 h-7 text-white"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/Hero.jsx",
-                                                                    lineNumber: 560,
+                                                                    lineNumber: 196,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                                lineNumber: 559,
+                                                                lineNumber: 195,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -640,7 +315,7 @@ const Hero = ()=>{
                                                                         children: "Book a Ride"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/Hero.jsx",
-                                                                        lineNumber: 563,
+                                                                        lineNumber: 199,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -648,19 +323,19 @@ const Hero = ()=>{
                                                                         children: "Economical | Efficient | Dependable"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/Hero.jsx",
-                                                                        lineNumber: 566,
+                                                                        lineNumber: 202,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                                lineNumber: 562,
+                                                                lineNumber: 198,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/Hero.jsx",
-                                                        lineNumber: 558,
+                                                        lineNumber: 194,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -676,7 +351,7 @@ const Hero = ()=>{
                                                                                 children: "Guest Name"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                                                lineNumber: 575,
+                                                                                lineNumber: 211,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -684,23 +359,23 @@ const Hero = ()=>{
                                                                                 className: "w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                                                lineNumber: 578,
+                                                                                lineNumber: 214,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/components/Hero.jsx",
-                                                                        lineNumber: 574,
+                                                                        lineNumber: 210,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                         children: [
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                                                 className: "block text-xs font-medium text-gray-300 mb-1",
-                                                                                children: "Email Address"
+                                                                                children: "Surname"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                                                lineNumber: 584,
+                                                                                lineNumber: 220,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -708,19 +383,19 @@ const Hero = ()=>{
                                                                                 className: "w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                                                lineNumber: 587,
+                                                                                lineNumber: 223,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/components/Hero.jsx",
-                                                                        lineNumber: 583,
+                                                                        lineNumber: 219,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                                lineNumber: 573,
+                                                                lineNumber: 209,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -730,10 +405,10 @@ const Hero = ()=>{
                                                                         children: [
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                                                 className: "block text-xs font-medium text-gray-300 mb-1",
-                                                                                children: "Phone Number"
+                                                                                children: "Mobile Number"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                                                lineNumber: 596,
+                                                                                lineNumber: 232,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -741,15 +416,105 @@ const Hero = ()=>{
                                                                                 className: "w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                                                lineNumber: 599,
+                                                                                lineNumber: 235,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/components/Hero.jsx",
-                                                                        lineNumber: 595,
+                                                                        lineNumber: 231,
                                                                         columnNumber: 25
                                                                     }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        children: [
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                                                className: "block text-xs font-medium text-gray-300 mb-1",
+                                                                                children: "Email ID"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/src/components/Hero.jsx",
+                                                                                lineNumber: 241,
+                                                                                columnNumber: 27
+                                                                            }, this),
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                                                type: "text",
+                                                                                className: "w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/src/components/Hero.jsx",
+                                                                                lineNumber: 244,
+                                                                                columnNumber: 27
+                                                                            }, this)
+                                                                        ]
+                                                                    }, void 0, true, {
+                                                                        fileName: "[project]/src/components/Hero.jsx",
+                                                                        lineNumber: 240,
+                                                                        columnNumber: 25
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/src/components/Hero.jsx",
+                                                                lineNumber: 230,
+                                                                columnNumber: 23
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "grid grid-cols-2 gap-2",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        children: [
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                                                className: "block text-xs font-medium text-gray-300 mb-1",
+                                                                                children: "From City"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/src/components/Hero.jsx",
+                                                                                lineNumber: 253,
+                                                                                columnNumber: 27
+                                                                            }, this),
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                                                type: "text",
+                                                                                className: "w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/src/components/Hero.jsx",
+                                                                                lineNumber: 256,
+                                                                                columnNumber: 27
+                                                                            }, this)
+                                                                        ]
+                                                                    }, void 0, true, {
+                                                                        fileName: "[project]/src/components/Hero.jsx",
+                                                                        lineNumber: 252,
+                                                                        columnNumber: 25
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        children: [
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                                                className: "block text-xs font-medium text-gray-300 mb-1",
+                                                                                children: "To City"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/src/components/Hero.jsx",
+                                                                                lineNumber: 262,
+                                                                                columnNumber: 27
+                                                                            }, this),
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                                                type: "text",
+                                                                                className: "w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/src/components/Hero.jsx",
+                                                                                lineNumber: 265,
+                                                                                columnNumber: 27
+                                                                            }, this)
+                                                                        ]
+                                                                    }, void 0, true, {
+                                                                        fileName: "[project]/src/components/Hero.jsx",
+                                                                        lineNumber: 261,
+                                                                        columnNumber: 25
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/src/components/Hero.jsx",
+                                                                lineNumber: 251,
+                                                                columnNumber: 23
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "grid grid-cols-2 gap-2",
+                                                                children: [
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                         children: [
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -757,7 +522,7 @@ const Hero = ()=>{
                                                                                 children: "Pickup Location"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                                                lineNumber: 605,
+                                                                                lineNumber: 274,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -765,46 +530,13 @@ const Hero = ()=>{
                                                                                 className: "w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                                                lineNumber: 608,
+                                                                                lineNumber: 277,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/components/Hero.jsx",
-                                                                        lineNumber: 604,
-                                                                        columnNumber: 25
-                                                                    }, this)
-                                                                ]
-                                                            }, void 0, true, {
-                                                                fileName: "[project]/src/components/Hero.jsx",
-                                                                lineNumber: 594,
-                                                                columnNumber: 23
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: "grid grid-cols-2 gap-2",
-                                                                children: [
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                        children: [
-                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                                                className: "block text-xs font-medium text-gray-300 mb-1",
-                                                                                children: "Destination"
-                                                                            }, void 0, false, {
-                                                                                fileName: "[project]/src/components/Hero.jsx",
-                                                                                lineNumber: 617,
-                                                                                columnNumber: 27
-                                                                            }, this),
-                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                                                type: "text",
-                                                                                className: "w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                                                                            }, void 0, false, {
-                                                                                fileName: "[project]/src/components/Hero.jsx",
-                                                                                lineNumber: 620,
-                                                                                columnNumber: 27
-                                                                            }, this)
-                                                                        ]
-                                                                    }, void 0, true, {
-                                                                        fileName: "[project]/src/components/Hero.jsx",
-                                                                        lineNumber: 616,
+                                                                        lineNumber: 273,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -813,10 +545,10 @@ const Hero = ()=>{
                                                                         children: [
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                                                 className: "block text-xs font-medium text-gray-300 mb-1",
-                                                                                children: "Vehicle Selection"
+                                                                                children: "Vehicle Type"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                                                lineNumber: 627,
+                                                                                lineNumber: 283,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -832,20 +564,20 @@ const Hero = ()=>{
                                                                                                 children: selectedVehicle || "Select Vehicle"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                                                                lineNumber: 636,
+                                                                                                lineNumber: 292,
                                                                                                 columnNumber: 31
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
                                                                                                 className: `w-3 h-3 transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                                                                lineNumber: 645,
+                                                                                                lineNumber: 301,
                                                                                                 columnNumber: 31
                                                                                             }, this)
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/src/components/Hero.jsx",
-                                                                                        lineNumber: 631,
+                                                                                        lineNumber: 287,
                                                                                         columnNumber: 29
                                                                                     }, this),
                                                                                     isDropdownOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -860,67 +592,43 @@ const Hero = ()=>{
                                                                                                 children: option.label
                                                                                             }, option.value, false, {
                                                                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                                                                lineNumber: 654,
+                                                                                                lineNumber: 310,
                                                                                                 columnNumber: 35
                                                                                             }, this))
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/src/components/Hero.jsx",
-                                                                                        lineNumber: 652,
+                                                                                        lineNumber: 308,
                                                                                         columnNumber: 31
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                                                lineNumber: 630,
+                                                                                lineNumber: 286,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/components/Hero.jsx",
-                                                                        lineNumber: 626,
+                                                                        lineNumber: 282,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                                lineNumber: 615,
+                                                                lineNumber: 272,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: "grid grid-cols-2 gap-2",
+                                                                className: "grid grid-cols-3 gap-2",
                                                                 children: [
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                         children: [
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                                                 className: "block text-xs font-medium text-gray-300 mb-1",
-                                                                                children: "Date"
+                                                                                children: "Pickup Time"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                                                lineNumber: 674,
-                                                                                columnNumber: 27
-                                                                            }, this),
-                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                                                type: "date",
-                                                                                className: "w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                                                                            }, void 0, false, {
-                                                                                fileName: "[project]/src/components/Hero.jsx",
-                                                                                lineNumber: 677,
-                                                                                columnNumber: 27
-                                                                            }, this)
-                                                                        ]
-                                                                    }, void 0, true, {
-                                                                        fileName: "[project]/src/components/Hero.jsx",
-                                                                        lineNumber: 673,
-                                                                        columnNumber: 25
-                                                                    }, this),
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                        children: [
-                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                                                className: "block text-xs font-medium text-gray-300 mb-1",
-                                                                                children: "Time"
-                                                                            }, void 0, false, {
-                                                                                fileName: "[project]/src/components/Hero.jsx",
-                                                                                lineNumber: 683,
+                                                                                lineNumber: 332,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -928,19 +636,67 @@ const Hero = ()=>{
                                                                                 className: "w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                                                lineNumber: 686,
+                                                                                lineNumber: 335,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/components/Hero.jsx",
-                                                                        lineNumber: 682,
+                                                                        lineNumber: 331,
+                                                                        columnNumber: 25
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        children: [
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                                                className: "block text-xs font-medium text-gray-300 mb-1",
+                                                                                children: "Journey Start Date"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/src/components/Hero.jsx",
+                                                                                lineNumber: 341,
+                                                                                columnNumber: 27
+                                                                            }, this),
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                                                type: "date",
+                                                                                className: "w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/src/components/Hero.jsx",
+                                                                                lineNumber: 344,
+                                                                                columnNumber: 27
+                                                                            }, this)
+                                                                        ]
+                                                                    }, void 0, true, {
+                                                                        fileName: "[project]/src/components/Hero.jsx",
+                                                                        lineNumber: 340,
+                                                                        columnNumber: 25
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        children: [
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                                                className: "block text-xs font-medium text-gray-300 mb-1",
+                                                                                children: "Journey End Date"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/src/components/Hero.jsx",
+                                                                                lineNumber: 350,
+                                                                                columnNumber: 27
+                                                                            }, this),
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                                                type: "date",
+                                                                                className: "w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/src/components/Hero.jsx",
+                                                                                lineNumber: 353,
+                                                                                columnNumber: 27
+                                                                            }, this)
+                                                                        ]
+                                                                    }, void 0, true, {
+                                                                        fileName: "[project]/src/components/Hero.jsx",
+                                                                        lineNumber: 349,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                                lineNumber: 672,
+                                                                lineNumber: 330,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -950,74 +706,74 @@ const Hero = ()=>{
                                                                     children: "Submit"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/Hero.jsx",
-                                                                    lineNumber: 694,
+                                                                    lineNumber: 373,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                                lineNumber: 693,
+                                                                lineNumber: 372,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/Hero.jsx",
-                                                        lineNumber: 572,
+                                                        lineNumber: 208,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/Hero.jsx",
-                                                lineNumber: 557,
+                                                lineNumber: 193,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Hero.jsx",
-                                            lineNumber: 556,
+                                            lineNumber: 192,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "absolute -top-4 -right-4 w-16 h-16 bg-red-500/30 rounded-full blur-xl animate-pulse"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Hero.jsx",
-                                            lineNumber: 703,
+                                            lineNumber: 382,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "absolute -bottom-4 -left-4 w-12 h-12 bg-red-500/20 rounded-full blur-lg animate-pulse delay-1000"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Hero.jsx",
-                                            lineNumber: 704,
+                                            lineNumber: 383,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Hero.jsx",
-                                    lineNumber: 554,
+                                    lineNumber: 190,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Hero.jsx",
-                                lineNumber: 547,
+                                lineNumber: 183,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Hero.jsx",
-                        lineNumber: 466,
+                        lineNumber: 102,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/Hero.jsx",
-                    lineNumber: 465,
+                    lineNumber: 101,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/Hero.jsx",
-                lineNumber: 464,
+                lineNumber: 100,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute bottom-8 left-1/2 transform -translate-x-1/2 z-50",
+                className: "absolute bottom-8 left-1/2 transform -translate-x-1/2 z-40",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "flex gap-3",
                     children: heroSlides.map((_, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1025,17 +781,17 @@ const Hero = ()=>{
                             className: `w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide ? "bg-red-500 w-8" : "bg-white/30 hover:bg-white/50"}`
                         }, index, false, {
                             fileName: "[project]/src/components/Hero.jsx",
-                            lineNumber: 715,
+                            lineNumber: 394,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/src/components/Hero.jsx",
-                    lineNumber: 713,
+                    lineNumber: 392,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/Hero.jsx",
-                lineNumber: 712,
+                lineNumber: 391,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1048,38 +804,38 @@ const Hero = ()=>{
                             children: "Scroll"
                         }, void 0, false, {
                             fileName: "[project]/src/components/Hero.jsx",
-                            lineNumber: 731,
+                            lineNumber: 410,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "w-px h-12 bg-gradient-to-b from-white/60 to-transparent"
                         }, void 0, false, {
                             fileName: "[project]/src/components/Hero.jsx",
-                            lineNumber: 734,
+                            lineNumber: 413,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
                             className: "w-4 h-4 rotate-90"
                         }, void 0, false, {
                             fileName: "[project]/src/components/Hero.jsx",
-                            lineNumber: 735,
+                            lineNumber: 414,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Hero.jsx",
-                    lineNumber: 730,
+                    lineNumber: 409,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/Hero.jsx",
-                lineNumber: 729,
+                lineNumber: 408,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/Hero.jsx",
-        lineNumber: 443,
+        lineNumber: 79,
         columnNumber: 5
     }, this);
 };
@@ -1091,183 +847,6 @@ __turbopack_context__.k.register(_c, "Hero");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
 }
- // "use client";
- // import { useGSAPSlideInFromLeft, useGSAPFadeInUp } from "@/utils/animations";
- // import { useEffect, useRef } from "react";
- // import { usePathname } from "next/navigation";
- // import { motion } from "framer-motion";
- // import Link from "next/link";
- // export default function Hero() {
- //   const videoContainerRef = useRef(null);
- //   const contentRef = useRef(null);
- //   const pathname = usePathname();
- //   // Initialize animations
- //   useGSAPSlideInFromLeft(0, 1.5, videoContainerRef);
- //   useGSAPFadeInUp(0.5, 1.2, contentRef);
- //   // Handle video reload
- //   useEffect(() => {
- //     const video = videoContainerRef.current?.querySelector("video");
- //     if (pathname === "/" && video) {
- //       video.load();
- //       video.play().catch((e) => console.log("Autoplay prevented:", e));
- //     }
- //   }, [pathname]);
- //   return (
- //     <section
- //       id="hero"
- //       className="relative h-[100vh] overflow-hidden"
- //       ref={videoContainerRef}
- //     >
- // <video
- //   autoPlay
- //   muted
- //   loop
- //   playsInline
- //   preload="auto"
- //   className="absolute top-0 left-0 w-full h-full object-cover z-0 brightness-100 "
- //   key={pathname}
- // >
- //   <source src="/herosectionvideo.mp4" type="video/mp4" />
- //   Your browser does not support the video tag.
- // </video>
- //       <div
- //         ref={contentRef}
- //         className="flex-col relative z-20 h-full flex items-center justify-center text-center text-white/80 px-4 max-w-[700px] w-full mx-auto mt-14"
- //       >
- //         {/* Main Heading - LAST to animate (top of DOM, but appears last) */}
- //         <motion.h2
- //           initial={{ opacity: 0, y: 50 }}
- //           animate={{ opacity: 1, y: 0 }}
- //           transition={{
- //             duration: 1,
- //             delay: 1.8, // Longest delay (appears last)
- //             ease: [0.2, 0.8, 0.4, 1],
- //           }}
- //           className="text-2xl sm:text-3xl font-medium font-serif mb-8 leading-snug"
- //         >
- //           Corporate Car Rental Services a reliable travel partner for your{" "}
- //           <motion.span
- //             className="text-red-600 relative inline-block"
- //             initial={{ opacity: 0, x: -20 }}
- //             animate={{ opacity: 1, x: 0 }}
- //             transition={{ delay: 2.2 }}
- //           >
- //             Safe & Pleasant Journey
- //             <motion.span
- //               className="absolute -bottom-1 left-0 w-full h-0.5 bg-red-600"
- //               initial={{ scaleX: 0 }}
- //               animate={{ scaleX: 1 }}
- //               transition={{ delay: 2.4, duration: 0.8 }}
- //             />
- //           </motion.span>
- //         </motion.h2>
- //         {/* Elegant Feature Pills - THIRD to animate */}
- //         {/* <motion.div
- //           initial={{ opacity: 0, y: 20, scale: 0.98 }}
- //           animate={{ opacity: 1, y: 0, scale: 1 }}
- //           transition={{
- //             duration: 0.8,
- //             delay: 1.2, // After stats, before heading
- //             ease: "easeOut",
- //           }}
- //           className="flex items-center justify-center gap-6 mb-6 text-base font-medium flex-wrap"
- //         >
- //           {["Economical", "Efficient", "Dependable"].map((feature, index) => (
- //             <motion.div
- //               key={feature}
- //               initial={{ opacity: 0, y: 10 }}
- //               animate={{ opacity: 1, y: 0 }}
- //               transition={{ delay: 1.2 + index * 0.2 }}
- //               className="flex items-center gap-2 px-4 py-2 backdrop-blur-md bg-white/5 rounded-full border border-white/10 hover:bg-white/10 transition-all duration-300"
- //             >
- //               <motion.div
- //                 className="w-2 h-2 bg-red-500 rounded-full"
- //                 animate={{
- //                   scale: [1, 1.2, 1],
- //                   opacity: [0.6, 1, 0.6],
- //                 }}
- //                 transition={{
- //                   duration: 2,
- //                   repeat: Infinity,
- //                   delay: index * 0.3,
- //                 }}
- //               />
- //               <span className="text-gray-800 font-serif tracking-wider">
- //                 {feature}
- //               </span>
- //             </motion.div>
- //           ))}
- //         </motion.div> */}
- //         {/* Sophisticated Statistics - SECOND to animate */}
- //         {/* <motion.div
- //           initial={{ opacity: 0, y: 30 }}
- //           animate={{ opacity: 1, y: 0 }}
- //           transition={{
- //             duration: 0.8,
- //             delay: 0.6, // After CTA, before pills
- //             ease: "easeOut",
- //           }}
- //           className="flex items-center justify-center gap-8 lg:gap-12 flex-wrap mt-4 mb-8"
- //         >
- //           {[
- //             { value: "5000+", label: "Happy Clients" },
- //             { value: "100+", label: "Premium Cars" },
- //             { value: "24/7", label: "Support" },
- //           ].map((stat, index) => (
- //             <motion.div
- //               key={stat.label}
- //               initial={{ scale: 0.9 }}
- //               animate={{ scale: 1 }}
- //               transition={{
- //                 delay: 0.6 + index * 0.15,
- //                 duration: 0.5,
- //               }}
- //               className="text-center p-4 backdrop-blur-sm bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/10"
- //             >
- //               <div className="text-xl font-bold text-red-500 mb-1 font-serif">
- //                 {stat.value}
- //               </div>
- //               <div className="text-xs text-gray-300 tracking-wider uppercase font-light">
- //                 {stat.label}
- //               </div>
- //             </motion.div>
- //           ))}
- //         </motion.div> */}
- //         {/* Premium Call-to-Action - FIRST to animate (bottom of DOM, but appears first) */}
- //         <motion.div
- //           initial={{ opacity: 0, y: 40, scale: 0.95 }}
- //           animate={{ opacity: 1, y: 0, scale: 1 }}
- //           transition={{
- //             duration: 0.8,
- //             ease: [0.2, 0.8, 0.4, 1],
- //           }}
- //           className="relative group mt-4"
- //         >
- //           {/* Button Glow Effect */}
- //           <div className="absolute -inset-1 bg-gradient-to-r from-red-500 to-red-600 rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-300 animate-pulse" />
- //           <Link href="#scroll">
- //             <button className="relative cursor-pointer px-8 py-4 rounded-lg font-semibold text-base bg-transparent border-2 border-white/20 backdrop-blur-sm hover:bg-white/70 hover:text-black hover:shadow-2xl hover:shadow-red-500/20 transition-all duration-500 hover:scale-105 hover:border-white group overflow-hidden">
- //               {/* Button Inner Glow */}
- //               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-x-12 translate-x-full group-hover:translate-x-0 transition-transform duration-700" />
- //               <span className="relative z-10 tracking-wider font-serif">
- //                 Book a Ride
- //               </span>
- //               {/* Button Arrow */}
- //               <motion.span
- //                 className="relative z-10 ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1"
- //                 initial={{ opacity: 0, x: -10 }}
- //                 animate={{ opacity: 1, x: 0 }}
- //                 transition={{ duration: 0.5, delay: 1.5 }}
- //               >
- //                 →
- //               </motion.span>
- //             </button>
- //           </Link>
- //         </motion.div>
- //       </div>
- //     </section>
- //   );
- // }
 }}),
 "[project]/src/components/ui/SplitText.jsx [app-client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
@@ -2007,10 +1586,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 const Tabs = ({ tabs, activeTab, setActiveTab })=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "flex flex-wrap justify-around gap-2 mb-8 bg-white p-2 rounded-2xl shadow-lg",
+        className: "flex flex-wrap justify-around gap-2 mb-8 bg-white  rounded-2xl shadow-lg",
         children: tabs.map((tab)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                 onClick: ()=>setActiveTab(tab.id),
-                className: `flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer ${activeTab === tab.id ? "bg-gradient-to-r from-black to-red-800 cursor-pointer text-white shadow-lg" : "text-gray-600 hover:bg-gray-100"}`,
+                className: `flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer ${activeTab === tab.id ? "bg-red-500 cursor-pointer text-white shadow-lg" : "text-gray-600 hover:bg-gray-100"}`,
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(tab.icon, {
                         size: 18
