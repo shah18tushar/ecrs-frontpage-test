@@ -81,6 +81,7 @@ import React, { useEffect, useRef } from "react";
 import { Users, Award, ShieldCheck } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import MagnifierCursor from "./MagnifierCursor";
 
 const Achievements = () => {
   const sectionRef = useRef(null);
@@ -88,7 +89,8 @@ const Achievements = () => {
   const animationRef = useRef(null);
   const floatAnimations = useRef([]);
 
- 
+     const text = "Our Unmatched Excellence";
+
 
   const achievementsData = [
     {
@@ -124,11 +126,7 @@ const Achievements = () => {
   ];
 
   return (
-    <section
-     
-      className="relative py-24 px-4  overflow-hidden"
-    >
-
+    <section className="relative py-24 px-4  overflow-hidden">
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="flex justify-center mb-10">
           <div className="text-center max-w-2xl">
@@ -136,7 +134,7 @@ const Achievements = () => {
               Elite Standards
             </p>
             <h2 className="text-4xl md:text-3xl font-serif font-medium text-gray-900 mb-3">
-              Our Unmatched Excellence
+              <MagnifierCursor text={text} cursorSize={45} />
             </h2>
             <div className="w-28 h-0.5 bg-gradient-to-r from-transparent via-red-500 to-transparent mx-auto"></div>
           </div>
@@ -145,7 +143,6 @@ const Achievements = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {achievementsData.map((item, idx) => (
             <div
-        
               className={`relative bg-white rounded-xl border ${item.borderColor} p-8 hover:bg-red-50 text-center transition-all duration-500 group overflow-hidden hover:${item.shadowColor} hover:shadow-xl`}
               style={{
                 boxShadow: "0 15px 40px -15px rgba(0,0,0,0.08)",

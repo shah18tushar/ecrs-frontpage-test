@@ -134,8 +134,12 @@
 
 import React from "react";
 import { Car, BadgePercent, Headset } from "lucide-react";
+import MagnifierCursor from "./MagnifierCursor";
 
 const WhyUsCard = () => {
+
+    const text = " Why Choose ECRS..?";
+
   const features = [
     {
       icon: <Car size={40} className="text-red-500" />,
@@ -160,22 +164,21 @@ const WhyUsCard = () => {
   return (
     <section className="py-16 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-6">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Why Choose ECRS
-          </h2>
-          <p className="text-sm text-gray-600 max-w-2xl mx-auto">
-            Explore our first class limousine & car rental services
-          </p>
-          <div className="w-20 h-1 bg-red-500 mx-auto mt-3"></div>
+        <div className="flex justify-center mb-10">
+          <div className="text-center max-w-2xl">
+            <p className="text-red-500 font-medium  tracking-widest mb-3 text-sm uppercase">
+              Elite Standards
+            </p>
+            <h2 className="text-4xl md:text-3xl font-serif font-medium text-gray-900 mb-3">
+              <MagnifierCursor text={text} cursorSize={45} />
+            </h2>
+            <div className="w-28 h-0.5 bg-gradient-to-r from-transparent via-red-500 to-transparent mx-auto"></div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div
-              key={index}
-              className="bg-white p-8  text-center "
-            >
+            <div key={index} className="bg-white p-8  text-center ">
               <div className="flex justify-center mb-6">
                 <div className="">{feature.icon}</div>
               </div>
