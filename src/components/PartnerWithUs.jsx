@@ -412,7 +412,8 @@ const PartnerWithUs = () => {
                     {/* Vehicl Ownership */}
                     <div className="relative">
                       <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Vehicle Ownership <span className="text-red-500">*</span>
+                        Vehicle Ownership{" "}
+                        <span className="text-red-500">*</span>
                       </label>
                       <select className="w-full px-4 py-1.5 bg-white bg-opacity-70 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all duration-300 appearance-none shadow-sm hover:shadow-md">
                         <option value="">Select Ownership </option>
@@ -530,7 +531,7 @@ const PartnerWithUs = () => {
                   {/* Submit Button */}
                   <div className="flex justify-center">
                     <button className="cursor-pointer btn-shadow-red ">
-                      Submit
+                      Submit Enquiry
                     </button>
                   </div>
                 </form>

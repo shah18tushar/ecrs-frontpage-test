@@ -368,7 +368,7 @@ const Hero = () => {
 
                       <div className="flex justify-center">
                         <button className="btn-shadow-red text-xs font-semibold cursor-pointer">
-                          Submit
+                          Submit Enquiry
                         </button>
                       </div>
                     </div>

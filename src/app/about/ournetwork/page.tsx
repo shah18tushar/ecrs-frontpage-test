@@ -174,9 +174,9 @@ const OurNetworkPage = () => {
                                                 {getCitiesToDisplay().map((city, index) => (
                                                     <div
                                                         key={city}
-                                                        className="p-3 bg-gray-50 rounded-lg hover:bg-red-50 hover:shadow-md transition-all duration-200 group cursor-pointer transform hover:scale-105"
+                                                        className="p-2"
                                                         style={{
-                                                            animation: `fadeInScale 0.3s ease-out ${index * 0.05}s both`
+                                                            animation: `fadeInScale 0.3s ease-out ${index * 0.2}s both`
                                                         }}
                                                     >
                                                         <div className="flex items-center space-x-3">
