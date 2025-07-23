@@ -32,9 +32,9 @@ const CarCards: React.FC<CarCardsProps> = ({ car }) => {
     // Determine the category based on car specifications
     const category = car.specifications.body.toLowerCase().includes('sedan') ? 'sedan' :
       car.specifications.body.toLowerCase().includes('muv') ? 'muv' :
-        car.specifications.body.toLowerCase().includes('bus') ? 'bus' :
+        car.specifications.body.toLowerCase().includes('premium') ? 'premium' :
           car.specifications.body.toLowerCase().includes('luxury') ? 'luxury' :
-            car.specifications.body.toLowerCase().includes('premium') ? 'premium' :
+            car.specifications.body.toLowerCase().includes('bus') ? 'bus' :
               'e-vehicle';
 
     router.push(`/rides?category=${category}&carId=${car.id}`);

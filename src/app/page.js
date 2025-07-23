@@ -24,22 +24,28 @@ export default function Frontpage() {
         <section className="">
           <CarPackages />
         </section>
-        <section className="">
-          <WhyChooseUs />
-        </section>
+
         {/* This is our video parallax component */}
         <section className="">
           <BookingForm />
         </section>
+
         <section className="">
           <PartnerWithUs />
         </section>
-        <section className="">
-          <CallToAction />
-        </section>
+
         <section className="py-0 pb-0">
           <Achievements />
         </section>
+
+        <section className="">
+          <WhyChooseUs />
+        </section>
+
+        <section className="">
+          <CallToAction />
+        </section>
+
         <section className="py-0 pb-0">
           <Accordion_Info />
         </section>

@@ -5,7 +5,6 @@ import { motion, useInView } from "framer-motion";
 import { Star, Shield, Clock, MapPin, Brain, Crown } from "lucide-react";
 import MagnifierCursor from "./MagnifierCursor";
 
-
 const FeaturesComponent = () => {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { once: true, threshold: 0.1 });

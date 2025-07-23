@@ -12,9 +12,9 @@ const RidesPage = () => {
   const tabs = [
     { id: 'sedan', name: 'Sedan', icon: Car },
     { id: 'muv', name: 'MUV', icon: Users },
-    { id: 'bus', name: 'Bus', icon: Users },
-    { id: 'luxury', name: 'Luxury', icon: Star },
     { id: 'premium', name: 'Premium', icon: Star },
+    { id: 'luxury', name: 'Luxury', icon: Star },
+    { id: 'bus', name: 'Bus', icon: Users },
     { id: 'e-vehicle', name: 'E-Vehicle', icon: Zap }
   ];
 

@@ -6,7 +6,7 @@ import {
   ChevronDown,
   Car,
   Sparkles,
-} from "lucide-react";
+} from "lucide-react"
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -18,8 +18,7 @@ const Hero = () => {
 
   const heroSlides = [
     {
-      image:
-        "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: "./hero.jpg",
 
       // title: "Luxury Redefined",
       title: "Corporate Car Rental Services -   Reliable Travel Partner",
@@ -109,7 +108,7 @@ const Hero = () => {
               {/* Badge */}
 
               <div
-                className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/40 hover:bg-red-500/70 border border-red-500/30 backdrop-blur-sm text-white/70 text-base font-medium transform transition-all duration-700 ${
+                className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/70 hover:bg-red-500/40 border border-red-500/30 backdrop-blur-sm text-white/70 text-base font-medium transform transition-all duration-700 ${
                   isVisible
                     ? "translate-y-0 opacity-100"
                     : "translate-y-8 opacity-0"
@@ -148,7 +147,7 @@ const Hero = () => {
                 </h1>
 
                 {/* <p
-                  className={`text-xl font-semibold text-gray-300 leading-relaxed max-w-2xl transform transition-all duration-1000 delay-300 relative ${
+                  className={`text-xl font-semibold text-white leading-relaxed max-w-2xl transform transition-all duration-1000 delay-300 relative ${
                     isVisible
                       ? "translate-y-0 opacity-100"
                       : "translate-y-8 opacity-0"
@@ -181,7 +180,7 @@ const Hero = () => {
 
             {/* Right Content - Booking Form (Kept as original) */}
             <div
-              className={`lg:ml-8 mt-1 transform transition-all duration-1000 delay-500 ${
+              className={`lg:ml-8 mt-1 transform transition-all duration-1000 delay-1000 ${
                 isVisible
                   ? "translate-x-0 opacity-100"
                   : "translate-x-12 opacity-0"
@@ -189,7 +188,7 @@ const Hero = () => {
             >
               <div className="relative">
                 {/* Floating Card */}
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-4 border border-white/40 shadow-2xl hover:shadow-red-500/20 max-w-md mx-auto">
+                <div className="bg-white/10 backdrop-blur-2xl rounded-2xl p-4 border border-white/40 shadow-2xl hover:shadow-red-500/20 max-w-md mx-auto">
                   <div className="space-y-4">
                     <div className="flex items-center gap-3">
                       <div className="bg-red-600 p-2 rounded-full">
@@ -208,7 +207,7 @@ const Hero = () => {
                     <div className="space-y-3">
                       <div className="grid grid-cols-2 gap-2">
                         <div>
-                          <label className="block text-xs font-medium text-gray-300 mb-1">
+                          <label className="block text-xs font-semibold text-white mb-1">
                             Guest Name
                           </label>
                           <input
@@ -217,7 +216,7 @@ const Hero = () => {
                           />
                         </div>
                         <div>
-                          <label className="block text-xs font-medium text-gray-300 mb-1">
+                          <label className="block text-xs font-semibold text-white mb-1">
                             Surname
                           </label>
                           <input
@@ -229,7 +228,7 @@ const Hero = () => {
 
                       <div className="grid grid-cols-2 gap-2">
                         <div>
-                          <label className="block text-xs font-medium text-gray-300 mb-1">
+                          <label className="block text-xs font-semibold text-white mb-1">
                             Mobile Number
                           </label>
                           <input
@@ -238,7 +237,7 @@ const Hero = () => {
                           />
                         </div>
                         <div>
-                          <label className="block text-xs font-medium text-gray-300 mb-1">
+                          <label className="block text-xs font-semibold text-white mb-1">
                             Email ID
                           </label>
                           <input
@@ -250,7 +249,7 @@ const Hero = () => {
 
                       <div className="grid grid-cols-2 gap-2">
                         <div>
-                          <label className="block text-xs font-medium text-gray-300 mb-1">
+                          <label className="block text-xs font-semibold text-white mb-1">
                             From City
                           </label>
                           <input
@@ -259,7 +258,7 @@ const Hero = () => {
                           />
                         </div>
                         <div>
-                          <label className="block text-xs font-medium text-gray-300 mb-1">
+                          <label className="block text-xs font-semibold text-white mb-1">
                             To City
                           </label>
                           <input
@@ -271,7 +270,7 @@ const Hero = () => {
 
                       <div className="grid grid-cols-2 gap-2">
                         <div>
-                          <label className="block text-xs font-medium text-gray-300 mb-1">
+                          <label className="block text-xs font-semibold text-white mb-1">
                             Pickup Location
                           </label>
                           <input
@@ -280,7 +279,7 @@ const Hero = () => {
                           />
                         </div>
                         <div className="relative" ref={dropdownRef}>
-                          <label className="block text-xs font-medium text-gray-300 mb-1">
+                          <label className="block text-xs font-semibold text-white mb-1">
                             Vehicle Type
                           </label>
                           <div className="relative">
@@ -314,7 +313,7 @@ const Hero = () => {
                                       setSelectedVehicle(option.label);
                                       setIsDropdownOpen(false);
                                     }}
-                                    className="w-full px-3 py-2 text-xs text-left text-white hover:bg-white/10 first:rounded-t-lg last:rounded-b-lg transition-colors duration-200"
+                                    className="w-full px-3 py-2 text-xs text-left text-white font-medium    hover:bg-white hover:text-red-500 first:rounded-t-lg last:rounded-b-lg transition-colors duration-200"
                                   >
                                     {option.label}
                                   </button>
@@ -325,11 +324,9 @@ const Hero = () => {
                         </div>
                       </div>
 
-                   
-
                       <div className="grid grid-cols-3 gap-2">
                         <div>
-                          <label className="block text-xs font-medium text-gray-300 mb-1">
+                          <label className="block text-xs font-semibold text-white mb-1">
                             Pickup Time
                           </label>
                           <input
@@ -338,7 +335,7 @@ const Hero = () => {
                           />
                         </div>
                         <div>
-                          <label className="block text-xs font-medium text-gray-300 mb-1">
+                          <label className="block text-xs font-semibold text-white mb-1">
                             Journey Start Date
                           </label>
                           <input
@@ -347,7 +344,7 @@ const Hero = () => {
                           />
                         </div>
                         <div>
-                          <label className="block text-xs font-medium text-gray-300 mb-1">
+                          <label className="block text-xs font-semibold text-white mb-1">
                             Journey End Date
                           </label>
                           <input
@@ -359,7 +356,7 @@ const Hero = () => {
 
                       {/* <div className="grid grid-cols-1">
                         <div>
-                          <label className="block text-xs font-medium text-gray-300 mb-1">
+                          <label className="block text-xs font-medium text-white mb-1">
                             Time
                           </label>
                           <input

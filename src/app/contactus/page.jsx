@@ -1,36 +1,36 @@
-'use client';
+"use client";
 
-import {useState} from 'react';
-import dynamic from 'next/dynamic';
-import SplitText from '@/components/ui/SplitText';
-import Threads from '@/components/ui/Threads';
-import ContactCard from '@/components/ui/ContactCard';
-import {offices} from '@/data/contactoffices';
+import { useState } from "react";
+import dynamic from "next/dynamic";
+import SplitText from "@/components/ui/SplitText";
+import Threads from "@/components/ui/Threads";
+import ContactCard from "@/components/ui/ContactCard";
+import { offices } from "@/data/contactoffices";
 
 // Dynamic import to avoid SSR issue with Leaflet
-const Map = dynamic (() => import ('./Map'), {ssr: false});
+const Map = dynamic(() => import("./Map"), { ssr: false });
 
-export default function ContactPage () {
-  const [selected, setSelected] = useState (0);
-  const [formData, setFormData] = useState ({
-    name: '',
-    phone: '',
-    email: '',
-    message: '',
+export default function ContactPage() {
+  const [selected, setSelected] = useState(0);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
   });
 
-  const handleChange = e => {
-    setFormData ({...formData, [e.target.name]: e.target.value});
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = e => {
-    e.preventDefault ();
-    console.log (formData);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
     // Add toast or form reset logic here if needed
   };
 
   return (
-    <div className="text-black">
+    <div className="text-black relative z-10">
       {/* Hero Section with Threads */}
       <section className="relative w-full h-[350px] md:h-[270px] mt-20 overflow-hidden flex items-center justify-center bg-white">
         <div className="absolute inset-0 z-0">
@@ -44,8 +44,8 @@ export default function ContactPage () {
             duration={0.6}
             ease="power3.out"
             splitType="chars"
-            from={{opacity: 0, y: 30}}
-            to={{opacity: 1, y: 0}}
+            from={{ opacity: 0, y: 30 }}
+            to={{ opacity: 1, y: 0 }}
             threshold={0.1}
           />
           <p className="text-gray-600  max-w-xl mx-auto text-lg">
@@ -59,7 +59,7 @@ export default function ContactPage () {
         <div className="max-w-screen-xl mx-auto">
           {/* Office Cards */}
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-10">
-            {offices.map ((office, index) => (
+            {offices.map((office, index) => (
               <ContactCard
                 key={index}
                 title={office.title}
@@ -67,7 +67,7 @@ export default function ContactPage () {
                 phones={office.phones}
                 emails={office.emails}
                 isSelected={selected === index}
-                onClick={() => setSelected (index)}
+                onClick={() => setSelected(index)}
               />
             ))}
           </div>

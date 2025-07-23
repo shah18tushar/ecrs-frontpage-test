@@ -342,7 +342,8 @@ const Navbar1 = ({
         { title: "Our Network", url: "/about/ournetwork" },
       ],
     },
-    { title: "Rides", url: "/rides" },
+    { title: "Packages", url: "/rides" },
+    { title: "ETS", url: "/#" },
     { title: "Blog", url: "/blogs" },
     { title: "Careers", url: "/careers" },
     { title: "Gallery", url: "/gallery" },
@@ -491,16 +492,16 @@ const renderMenuItem = (item: MenuItem, scrolled: boolean) => {
     const textStyle = "text-black ";
     return (
       <NavigationMenuItem key={item.title}>
-        <NavigationMenuTrigger className={`text-lg font-medium hover:bg-transparent ${textStyle}`}>
+        <NavigationMenuTrigger className={`text-sm font-medium hover:bg-transparent ${textStyle}`}>
           {item.title}
         </NavigationMenuTrigger>
-        <NavigationMenuContent className="min-w-[200px]">
-          <div className="flex flex-col p-2">
+        <NavigationMenuContent >
+          <div className="flex flex-col p-0">
             {item.items.map((subItem) => (
               <NavigationMenuLink asChild key={subItem.title}>
                 <Link
                   href={subItem.url}
-                  className="hover:bg-gray-50 px-4 py-2 rounded-md block"
+                  className="hover:bg-gray-100 px-4 text-sm rounded-md block"
                 >
                   {subItem.title}
                 </Link>
@@ -517,7 +518,7 @@ const renderMenuItem = (item: MenuItem, scrolled: boolean) => {
       <NavigationMenuLink asChild>
         <Link
           href={item.url}
-          className={`text-lg font-medium hover:underline px-2 block ${textStyle}`}
+          className={`text-sm font-medium hover:underline px-2 block ${textStyle}`}
         >
           {item.title}
         </Link>

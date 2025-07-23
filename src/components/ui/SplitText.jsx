@@ -119,7 +119,7 @@ const SplitText = ({
         overflow: "visible",
         display: "inline-block",
         lineHeight: 1.2,
-        paddingBottom: "0.5em",
+        paddingBottom: "0.3em",
       }}
     >
       {text}

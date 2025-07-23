@@ -59,6 +59,7 @@ export const carData = {
       ],
     },
   ],
+
   muv: [
     {
       id: 3,
@@ -117,66 +118,6 @@ export const carData = {
       ],
     },
   ],
-  bus: [
-    {
-      id: 5,
-      name: "Tempo Traveller",
-      rating: 4.5,
-      reviews: 78,
-      price: 5999,
-      hourlyPrice: 2499,
-      images: [
-        "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&h=400&fit=crop",
-        "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&h=400&fit=crop",
-      ],
-      specifications: {
-        body: "Bus",
-        seating: "12+1 seats",
-        doors: "2 doors",
-        engine: "2596 cc",
-        transmission: "Manual",
-        fuelType: "Diesel",
-        ac: "AC",
-      },
-      features: [
-        "Group travel ready",
-        "Luggage space",
-        "Airport pickup/drop",
-        "Interstate travel",
-        "Professional driver",
-      ],
-    },
-  ],
-  luxury: [
-    {
-      id: 6,
-      name: "BMW 3 Series",
-      rating: 4.9,
-      reviews: 45,
-      price: 8999,
-      hourlyPrice: 3999,
-      images: [
-        "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600&h=400&fit=crop",
-        "https://images.unsplash.com/photo-1563720223185-11003d516935?w=600&h=400&fit=crop",
-      ],
-      specifications: {
-        body: "Luxury Sedan",
-        seating: "4+1 seats",
-        doors: "4 doors",
-        engine: "1998 cc",
-        transmission: "Automatic",
-        fuelType: "Petrol",
-        ac: "Climate Control",
-      },
-      features: [
-        "Premium luxury experience",
-        "Professional chauffeur",
-        "Airport VIP service",
-        "Corporate events",
-        "Wedding specials",
-      ],
-    },
-  ],
   premium: [
     {
       id: 7,
@@ -207,6 +148,69 @@ export const carData = {
       ],
     },
   ],
+
+  luxury: [
+    {
+      id: 6,
+      name: "BMW 3 Series",
+      rating: 4.9,
+      reviews: 45,
+      price: 8999,
+      hourlyPrice: 3999,
+      images: [
+        "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1563720223185-11003d516935?w=600&h=400&fit=crop",
+      ],
+      specifications: {
+        body: "Luxury Sedan",
+        seating: "4+1 seats",
+        doors: "4 doors",
+        engine: "1998 cc",
+        transmission: "Automatic",
+        fuelType: "Petrol",
+        ac: "Climate Control",
+      },
+      features: [
+        "Premium luxury experience",
+        "Professional chauffeur",
+        "Airport VIP service",
+        "Corporate events",
+        "Wedding specials",
+      ],
+    },
+  ],
+
+  bus: [
+    {
+      id: 5,
+      name: "Tempo Traveller",
+      rating: 4.5,
+      reviews: 78,
+      price: 5999,
+      hourlyPrice: 2499,
+      images: [
+        "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&h=400&fit=crop",
+      ],
+      specifications: {
+        body: "Bus",
+        seating: "12+1 seats",
+        doors: "2 doors",
+        engine: "2596 cc",
+        transmission: "Manual",
+        fuelType: "Diesel",
+        ac: "AC",
+      },
+      features: [
+        "Group travel ready",
+        "Luggage space",
+        "Airport pickup/drop",
+        "Interstate travel",
+        "Professional driver",
+      ],
+    },
+  ],
+
   "e-vehicle": [
     {
       id: 8,

@@ -10,12 +10,10 @@ import {
 import MagnifierCursor from "./MagnifierCursor";
 
 export default function Accordion_Info() {
-
-  const text =  "FAQ's"
-
+  const text = "FAQ's";
 
   return (
-    <section className="pb-12 relative">
+    <section className="py-10 relative">
       {/* Background Design */}
       <div className="absolute inset-0 -z-10">
         <div className="h-full w-full bg-gradient-to-t from-red-400 to-transparent rounded-full opacity-10" />

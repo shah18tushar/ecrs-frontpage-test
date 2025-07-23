@@ -1,205 +1,278 @@
-// 'use client';
-
-// import React from 'react';
-// import {Users, Award} from 'lucide-react';
-// import SpotlightCard from '@/components/ui/SpotlightCard';
-// import SplitText from '@/components/ui/SplitText';
-
-// const achievementsData = [
-//   {
-//     icon: <Users size={40} className="text-black" />,
-//     count: '175+',
-//     title: 'Happy Corporate Customers',
-//     description: 'Where satisfaction meets service excellence. Join our community and experience unparalleled and smiles every step of the way.',
-//   },
-//   {
-//     icon: <Award size={40} className="text-black" />,
-//     count: '13+',
-//     title: 'Years Experience',
-//     description: 'Our seasoned expertise will brings reliability and trust. Count on us for quality service backed by years of proven experience.',
-//   },
-// ];
-
-// const Achievements = () => {
-//   return (
-//     <section className=" py-16 px-4 text-black">
-//       <div className="max-w-6xl mx-auto">
-//         <div className="flex justify-center mb-12">
-//           <SplitText
-//             text="Our Achievements"
-//             className="text-4xl md:text-6xl font-bold text-center"
-//             delay={100}
-//             duration={0.6}
-//             ease="power3.out"
-//             splitType="chars"
-//             from={{opacity: 0, y: 40}}
-//             to={{opacity: 1, y: 0}}
-//             threshold={0.1}
-//             rootMargin="-100px"
-//             textAlign="center"
-//           />
-//         </div>
-
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-//           {achievementsData.map ((item, idx) => (
-//             <SpotlightCard
-//               key={idx}
-//               className="bg-white text-black border border-white rounded-xl shadow-md p-8 text-center hover:shadow-lg transition-all duration-300"
-//               spotlightColor="rgb(193, 0, 7)"
-//             >
-//               <div className="flex justify-center mb-4">{item.icon}</div>
-//               <div className="text-4xl font-bold text-red-700 mb-2">
-//                 {item.count}
-//               </div>
-//               <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-//               <p className="text-gray-500 text-sm">{item.description}</p>
-//             </SpotlightCard>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Achievements;
-
-
-
-
-
-
-
-
-
-
-
-
-
 "use client";
 
-import React, { useEffect, useRef } from "react";
-import { Users, Award, ShieldCheck } from "lucide-react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import MagnifierCursor from "./MagnifierCursor";
+import React from "react";
+import InfiniteScroll from "./ui/InfiniteScroll";
 
-const Achievements = () => {
-  const sectionRef = useRef(null);
-  const cardRefs = useRef([]);
-  const animationRef = useRef(null);
-  const floatAnimations = useRef([]);
+const CoreValues = () => {
 
-     const text = "Our Unmatched Excellence";
-
-
-  const achievementsData = [
-    {
-      icon: <Users size={40} className="text-red-500" />,
-      count: "175+",
-      title: "Exclusive Corporate Clients",
-      description:
-        "Trusted by Fortune 175+ executives, celebrities, and royalty who expect nothing but perfection in their transportation.",
-      accentColor: "bg-gradient-to-br from-red-500 to-red-700",
-      shadowColor: "shadow-red-300",
-      borderColor: "border-red-200",
-    },
-    {
-      icon: <Award size={40} className="text-red-500" />,
-      count: "13+",
-      title: "Years of Excellence",
-      description:
-        "Nearly two decades of setting the standard for luxury mobility with impeccable service records by ECRS.",
-      accentColor: "bg-gradient-to-br from-red-500 to-red-700",
-      shadowColor: "shadow-red-300",
-      borderColor: "border-red-200",
-    },
-    {
-      icon: <ShieldCheck size={40} className="text-red-500" />,
-      count: "100%",
-      title: "Safety Record",
-      description:
-        "Flawless safety maintained by our professional chauffeurs with special forces training backgrounds.",
-      accentColor: "bg-gradient-to-br from-red-500 to-red-700",
-      shadowColor: "shadow-red-300",
-      borderColor: "border-red-200",
-    },
-  ];
+   const items = [
+     {
+       content: (
+         <div className="bg-gradient-to-br from-red-500 via-red-600 to-red-700 text-white p-6 rounded-2xl shadow-2xl border border-red-400/30 backdrop-blur-sm">
+           <div className="text-2xl font-bold mb-2">🏆 Excellence</div>
+           <p className="text-sm opacity-90">
+             Delivering premium automotive experiences that exceed expectations
+           </p>
+         </div>
+       ),
+     },
+     {
+       content: (
+         <div className="bg-gradient-to-br from-red-600 via-red-500 to-red-700 text-white p-6 rounded-2xl shadow-2xl border border-red-400/30 backdrop-blur-sm">
+           <div className="text-2xl font-bold mb-2">🔧 Reliability</div>
+           <p className="text-sm opacity-90">
+             Meticulously maintained fleet ensuring seamless journeys
+           </p>
+         </div>
+       ),
+     },
+     {
+       content: (
+         <div className="bg-gradient-to-br from-red-700 via-red-600 to-red-500 text-white p-6 rounded-2xl shadow-2xl border border-red-400/30 backdrop-blur-sm">
+           <div className="text-2xl font-bold mb-2">👥 Customer First</div>
+           <p className="text-sm opacity-90">
+             Your satisfaction drives every decision we make
+           </p>
+         </div>
+       ),
+     },
+     {
+       content: (
+         <div className="bg-gradient-to-br from-red-500 via-red-700 to-red-600 text-white p-6 rounded-2xl shadow-2xl border border-red-400/30 backdrop-blur-sm">
+           <div className="text-2xl font-bold mb-2">🚗 Innovation</div>
+           <p className="text-sm opacity-90">
+             Cutting-edge technology meets traditional automotive craftsmanship
+           </p>
+         </div>
+       ),
+     },
+     {
+       content: (
+         <div className="bg-gradient-to-br from-red-600 via-red-700 to-red-500 text-white p-6 rounded-2xl shadow-2xl border border-red-400/30 backdrop-blur-sm">
+           <div className="text-2xl font-bold mb-2">💎 Integrity</div>
+           <p className="text-sm opacity-90">
+             Transparent pricing, honest service, unwavering trust
+           </p>
+         </div>
+       ),
+     },
+     {
+       content: (
+         <div className="bg-gradient-to-br from-red-700 via-red-500 to-red-600 text-white p-6 rounded-2xl shadow-2xl border border-red-400/30 backdrop-blur-sm">
+           <div className="text-2xl font-bold mb-2">🌟 Luxury</div>
+           <p className="text-sm opacity-90">
+             Every vehicle curated for the discerning traveler
+           </p>
+         </div>
+       ),
+     },
+     {
+       content: (
+         <div className="bg-gradient-to-br from-red-500 via-red-600 to-red-700 text-white p-6 rounded-2xl shadow-2xl border border-red-400/30 backdrop-blur-sm">
+           <div className="text-2xl font-bold mb-2">⚡ Performance</div>
+           <p className="text-sm opacity-90">
+             High-performance vehicles for extraordinary experiences
+           </p>
+         </div>
+       ),
+     },
+     {
+       content: (
+         <div className="bg-gradient-to-br from-red-600 via-red-500 to-red-700 text-white p-6 rounded-2xl shadow-2xl border border-red-400/30 backdrop-blur-sm">
+           <div className="text-2xl font-bold mb-2">🛡️ Safety</div>
+           <p className="text-sm opacity-90">
+             Rigorous safety standards protecting every journey
+           </p>
+         </div>
+       ),
+     },
+     {
+       content: (
+         <div className="bg-gradient-to-br from-red-700 via-red-600 to-red-500 text-white p-6 rounded-2xl shadow-2xl border border-red-400/30 backdrop-blur-sm">
+           <div className="text-2xl font-bold mb-2">🌍 Sustainability</div>
+           <p className="text-sm opacity-90">
+             Eco-conscious options for responsible luxury travel
+           </p>
+         </div>
+       ),
+     },
+     {
+       content: (
+         <div className="bg-gradient-to-br from-red-500 via-red-700 to-red-600 text-white p-6 rounded-2xl shadow-2xl border border-red-400/30 backdrop-blur-sm">
+           <div className="text-2xl font-bold mb-2">📞 Support</div>
+           <p className="text-sm opacity-90">
+             24/7 premium support for uninterrupted service
+           </p>
+         </div>
+       ),
+     },
+     {
+       content: (
+         <div className="bg-gradient-to-br from-red-600 via-red-700 to-red-500 text-white p-6 rounded-2xl shadow-2xl border border-red-400/30 backdrop-blur-sm">
+           <div className="text-2xl font-bold mb-2">🎯 Precision</div>
+           <p className="text-sm opacity-90">
+             Attention to detail in every aspect of service delivery
+           </p>
+         </div>
+       ),
+     },
+     {
+       content: (
+         <div className="bg-gradient-to-br from-red-700 via-red-500 to-red-600 text-white p-6 rounded-2xl shadow-2xl border border-red-400/30 backdrop-blur-sm">
+           <div className="text-2xl font-bold mb-2">🚀 Evolution</div>
+           <p className="text-sm opacity-90">
+             Continuously evolving to set new industry standards
+           </p>
+         </div>
+       ),
+     },
+   ];
 
   return (
-    <section className="relative py-24 px-4  overflow-hidden">
-      <div className="max-w-6xl mx-auto relative z-10">
-        <div className="flex justify-center mb-10">
-          <div className="text-center max-w-2xl">
-            <p className="text-red-500 font-medium  tracking-widest mb-3 text-sm uppercase">
-              Elite Standards
-            </p>
-            <h2 className="text-4xl md:text-3xl font-serif font-medium text-gray-900 mb-3">
-              <MagnifierCursor text={text} cursorSize={45} />
-            </h2>
-            <div className="w-28 h-0.5 bg-gradient-to-r from-transparent via-red-500 to-transparent mx-auto"></div>
+    <section className="py-10 bg-gradient-to-b from-black via-gray-950 to-black relative overflow-hidden">
+      {/* Premium background effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 via-transparent to-red-500/5"></div>
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-red-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-red-600/10 rounded-full blur-3xl"></div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        {/* Luxurious header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-3 mb-6">
+            <div className="w-12 h-0.5 bg-gradient-to-r from-transparent to-red-500"></div>
+            <span className="text-red-500 font-medium text-sm tracking-widest uppercase">
+              Our Foundation
+            </span>
+            <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-red-500"></div>
+          </div>
+
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+            Core{" "}
+            <span className="bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">
+              Values
+            </span>
+          </h2>
+
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
+            The principles that drive our commitment to automotive excellence
+            and unparalleled customer experience
+          </p>
+        </div>
+
+        <div className="flex flex-col lg:flex-row items-center gap-16">
+          {/* Left Content - Premium brand story */}
+          <div className="w-full lg:w-1/2 space-y-8">
+            <div className="relative">
+              {/* Decorative elements */}
+              <div className="absolute -top-4 -left-4 w-20 h-20 bg-red-500/10 rounded-full blur-xl"></div>
+              <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-red-600/10 rounded-full blur-lg"></div>
+
+              <div className="relative bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-sm border border-red-500/20 rounded-3xl p-8 shadow-2xl">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-8 h-8 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center shadow-xl">
+                    <span className="text-white text-lg font-bold">E</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white tracking-widest">
+                      ECRS
+                    </h3>
+                    <p className="text-red-400 text-sm font-medium">
+                      Economical | Efficient | Dependable
+                    </p>
+                  </div>
+                </div>
+
+                <p className="text-gray-300 leading-relaxed text-base mb-6">
+                  Where automotive passion meets uncompromising service
+                  excellence. Every vehicle in our curated fleet represents our
+                  dedication to providing extraordinary driving experiences.
+                </p>
+
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="text-center p-4 bg-red-500/10 rounded-xl border border-red-500/20">
+                    <div className="text-base font-semibold text-red-400">
+                      Accountability
+                    </div>
+                    <div className="text-xs text-gray-400 mt-1">
+                      We take responsibility for our actions and results
+                    </div>
+                  </div>
+                  <div className="text-center p-4 bg-red-500/10 rounded-xl border border-red-500/20">
+                    <div className="text-base font-semibold text-red-400">
+                      Excellence
+                    </div>
+                    <div className="text-xs text-gray-400 mt-1">
+                      We are dedicated to providing top-tier consultation
+                      services
+                    </div>
+                  </div>
+                  <div className="text-center p-4 bg-red-500/10 rounded-xl border border-red-500/20">
+                    <div className="text-base font-semibold text-red-400">
+                      Integrity
+                    </div>
+                    <div className="text-xs text-gray-400 mt-1">
+                      We maintain high ethical standards
+                    </div>
+                  </div>
+                  <div className="text-center p-4 bg-red-500/10 rounded-xl border border-red-500/20">
+                    <div className="text-base font-semibold text-red-400">
+                      24/7 Operational
+                    </div>
+                    <div className="text-xs text-gray-400 mt-1">
+                      Premium Support
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <div className="flex -space-x-2">
+                    <div className="w-8 h-8 bg-gradient-to-r from-red-500 to-red-600 rounded-full border-2 border-black"></div>
+                    <div className="w-8 h-8 bg-gradient-to-r from-red-600 to-red-700 rounded-full border-2 border-black"></div>
+                    <div className="w-8 h-8 bg-gradient-to-r from-red-700 to-red-500 rounded-full border-2 border-black"></div>
+                  </div>
+                  <span className="text-gray-400 text-sm">
+                    Trusted by 500+ corporate clients across the India.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Content - Enhanced infinite scroll */}
+          <div className="w-full lg:w-1/2">
+            <div className="relative">
+              {/* Decorative glow effects */}
+
+              <div className="relative " style={{ height: "450px" }}>
+                <InfiniteScroll
+                  items={items}
+                  isTilted={true}
+                  tiltDirection="right"
+                  autoplay={true}
+                  autoplaySpeed={1}
+                  autoplayDirection="up"
+                  pauseOnHover={true}
+                  itemMinHeight={180}
+                  negativeMargin="-0.75em"
+                />
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {achievementsData.map((item, idx) => (
-            <div
-              className={`relative bg-white rounded-xl border ${item.borderColor} p-8 hover:bg-red-50 text-center transition-all duration-500 group overflow-hidden hover:${item.shadowColor} hover:shadow-xl`}
-              style={{
-                boxShadow: "0 15px 40px -15px rgba(0,0,0,0.08)",
-                transformStyle: "preserve-3d",
-              }}
-            >
-              {/* Luxury shine effect */}
-              <div className="absolute inset-0 overflow-hidden rounded-xl">
-                <div
-                  className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(120deg,transparent_0%,rgba(255,255,255,0.4)_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700"
-                  style={{ transform: "translateZ(20px)" }}
-                ></div>
-              </div>
-
-              {/* Card content */}
-              <div
-                className="relative z-10"
-                style={{ transformStyle: "preserve-3d" }}
-              >
-                <div className="flex justify-center mb-6">
-                  <div
-                    // className={`p-4 bg-white rounded-full border ${item.borderColor} group-hover:border-red-500 transition-all duration-500 shadow-sm`}
-                    style={{ transform: "translateZ(30px)" }}
-                  >
-                    {item.icon}
-                  </div>
-                </div>
-                <div
-                  className={`text-5xl font-serif font-medium mb-3 bg-clip-text text-transparent ${item.accentColor}`}
-                  style={{ transform: "translateZ(20px)" }}
-                >
-                  {item.count}
-                </div>
-                <h3
-                  className="text-xl font-medium text-gray-900 mb-4"
-                  style={{ transform: "translateZ(15px)" }}
-                >
-                  {item.title}
-                </h3>
-                <p
-                  className="text-gray-600 font-light text-sm leading-relaxed"
-                  style={{ transform: "translateZ(10px)" }}
-                >
-                  {item.description}
-                </p>
-              </div>
-
-              {/* Depth effect */}
-              <div className="absolute inset-0 rounded-xl overflow-hidden pointer-events-none">
-                <div className="absolute inset-0 border border-transparent group-hover:border-red-500/30 transition-all duration-500 rounded-xl"></div>
-              </div>
-            </div>
-          ))}
+        {/* Bottom accent */}
+        <div className="mt-14 text-center">
+          <div className="inline-flex items-center gap-2 text-red-500">
+            <div className="w-2 h-2 bg-red-700 rounded-full"></div>
+            <span className="text-sm tracking-wide animate-pulse font-medium">
+              Driving Excellence Since 2009
+            </span>
+            <div className="w-2 h-2 bg-red-700 rounded-full"></div>
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-export default Achievements;
+export default CoreValues;

@@ -202,14 +202,14 @@ export default function ParallaxSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto">
         <div ref={headingRef} className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            To provide{" "}
-            <span className="text-gold-500">best quality services</span> to our
-            valued customers
+          <h2 className="text-4xl md:text-4xl font-bold text-white mb-6">
+            To Provide{" "}
+            <span className="text-red-400 underline underline-offset-4">Best Quality Services</span> To Our
+            Valued Customers
           </h2>
-          <p className="text-xl text-white/80 max-w-4xl mx-auto">
-            We are equipped with premium vehicles and professional staff to
-            ensure your complete satisfaction
+          <p className="text-xl text-white/80 max-w-5xl mx-auto font-bold">
+            "We are equipped with premium vehicles and professional staff to
+            ensure your complete satisfaction"
           </p>
         </div>
 
