@@ -10,7 +10,7 @@ const FeaturesComponent = () => {
   const isInView = useInView(containerRef, { once: true, threshold: 0.1 });
   const [activeFeature, setActiveFeature] = useState(0);
 
-  const text = "Premium Features Of ECRS";
+  const text = "Premium Features";
 
   const features = [
     {
@@ -141,6 +141,7 @@ const FeaturesComponent = () => {
           <div className="inline-flex items-center font-serif justify-center px-10 py-3 bg-gradient-to-r from-red-500/10 to-red-600/10 text-red-600 font-medium rounded-full border border-red-200 text-xl tracking-wider">
             <Crown className="w-5 h-5 mr-2" />
             <MagnifierCursor text={text} cursorSize={45} />
+            <Crown className="w-5 h-5 ml-2" />
           </div>
           <h1 className="max-w-md mx-auto mt-4 text-xs tracking-wide font-semibold text-gray-600">
             Our Special Offerings: Here's What We Have! Check out the cool

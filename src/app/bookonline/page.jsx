@@ -11,7 +11,7 @@ export default function BookOnline () {
   const [activeTab, setActiveTab] = useState ('personal');
 
   return (
-    <div className="min-h-screen bg-muted flex flex-col items-center px-4 py-28">
+    <div className="min-h-screen flex flex-col items-center px-4 py-28">
       <SplitText
         text="Book Online"
         className="text-4xl md:text-5xl font-bold text-gray-900 mb-10"

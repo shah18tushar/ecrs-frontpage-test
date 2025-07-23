@@ -3,7 +3,7 @@ import React from 'react';
 
 export const Tabs = ({tabs, activeTab, setActiveTab}) => {
   return (
-    <div className="flex flex-wrap justify-around gap-2 mb-8 bg-white  rounded-2xl shadow-lg">
+    <div className="flex justify-between mb-8 bg-white rounded-2xl shadow-lg">
       {tabs.map((tab) => (
         <button
           key={tab.id}

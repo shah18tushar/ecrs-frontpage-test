@@ -173,7 +173,7 @@ export default function ParallaxSection() {
       // }}
       style={{
         backgroundImage:
-          "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/carpic3.jpg')",
+          "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/hero.jpg')",
         backgroundPosition: "50% 50%",
         backgroundSize: "cover",
         filter: "brightness(0.75)",
@@ -204,8 +204,10 @@ export default function ParallaxSection() {
         <div ref={headingRef} className="text-center mb-20">
           <h2 className="text-4xl md:text-4xl font-bold text-white mb-6">
             To Provide{" "}
-            <span className="text-red-400 underline underline-offset-4">Best Quality Services</span> To Our
-            Valued Customers
+            <span className="text-red-400 underline underline-offset-4">
+              Best Quality Services
+            </span>{" "}
+            To Our Valued Customers
           </h2>
           <p className="text-xl text-white/80 max-w-5xl mx-auto font-bold">
             "We are equipped with premium vehicles and professional staff to
