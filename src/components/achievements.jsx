@@ -146,7 +146,7 @@ const CoreValues = () => {
             <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-red-500"></div>
           </div>
 
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+          <h2 className="text-5xl md:text-6xl font-bold font-serif text-white mb-6">
             Core{" "}
             <span className="bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">
               Values

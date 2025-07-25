@@ -7,6 +7,7 @@ import CallToAction from "@/components/CallToAction";
 import BookingForm from "../components/BookingForm";
 import Achievements from "@/components/achievements";
 import Accordion_Info from "@/components/Accordion_Info";
+import Testimonials from "@/components/Testimonials";
 
 export default function Frontpage() {
   return (
@@ -46,6 +47,10 @@ export default function Frontpage() {
           <CallToAction />
         </section>
 
+        <section className="">
+          <Testimonials />
+        </section>
+
         <section className="py-0 pb-0">
           <Accordion_Info />
         </section>
@@ -53,12 +58,3 @@ export default function Frontpage() {
     </div>
   );
 }
-
-
-
-
-
-
-
-
-

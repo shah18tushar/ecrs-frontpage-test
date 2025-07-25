@@ -124,27 +124,9 @@
   @apply w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-red-500;
 }
 
-
-
-
-
-
-
-
-
-
-
  */
 
-
-
-
-
-
-
  /* new scroll bar css */
-
-
 
  /* Ultra-Luxurious scrollbar for modal/dialog boxes */
  .luxury-modal-scrollbar::-webkit-scrollbar {
@@ -351,6 +333,24 @@
    --radius-md: calc(var(--radius) - 2px);
    --radius-lg: var(--radius);
    --radius-xl: calc(var(--radius) + 4px);
+   --animate-marquee: marquee var(--duration) infinite linear;
+   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  @keyframes marquee {
+  from {
+    transform: translateX(0);
+      }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+      }
+   }
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+      }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+      }
+   }
  }
 
  :root {
@@ -726,7 +726,6 @@
    }
  }
 
-
  .btn-shadow-red {
    @apply relative inline-flex h-8 items-center justify-center overflow-hidden rounded-md border border-red-500 bg-white px-6 font-medium text-red-600 transition-all duration-100 [box-shadow:5px_5px_rgb(239_68_68)];
  }
@@ -734,8 +733,6 @@
  .btn-shadow-red:hover {
    @apply translate-x-[3px] translate-y-[3px] bg-red-500 text-white [box-shadow:0px_0px_rgb(239_68_68)];
  }
-
-
 
  /* styles/globals.css */
 
@@ -758,10 +755,6 @@
    z-index: 9999;
  } */
 
-
-
-
-
  .custom-cursor {
    transition:
      background 0.3s;
@@ -776,13 +769,10 @@
      0 0 0 2px #fff3 inset;
  }
 
-
 /* Add to your globals.css */
  .custom-cursor~.magnifier-cursor {
    display: none !important;
  }
-
-
 
  @keyframes spin-slow {
    0% {
@@ -797,4 +787,3 @@
  .animate-spin-slow {
    animation: spin-slow 8s linear infinite;
  }
-

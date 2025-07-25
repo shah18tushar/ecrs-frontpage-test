@@ -95,17 +95,3 @@ const MagnifierCursor = ({
 };
 
 export default MagnifierCursor;
-
-
-
-
-
-
-
-
-
-
-
-
-
-

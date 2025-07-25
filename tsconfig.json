@@ -34,7 +34,7 @@
     "**/*.ts",
     "**/*.tsx",
     "src/utils/animations.js"
-  ],
+, "src/components/ui/BookingProcess.jsx"  ],
   "exclude": [
     "node_modules"
   ]

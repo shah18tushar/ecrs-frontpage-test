@@ -18,22 +18,26 @@ export const RidesCards = ({car}) => {
   const [liked, setLiked] = useState (false);
 
   return (
-    <div className="bg-white border-2 border-gray-100 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 w-full">
+    <div className="bg-white border-2 border-gray-100 rounded-2xl shadow-lg hover:shadow-2xl w-full">
       {/* Header */}
-      <div className="bg-gradient-to-r from-black to-red-800 px-6 py-4 rounded-t-2xl">
-        <div className="flex justify-between items-start">
+      <div
+        className="bg-gradient-to-r from-red-500 via-black to-red-500 px-6 py-4 rounded-t-2xl"
+      >
+        <div className="flex justify-center items-start">
           <div>
             <h3 className="text-xl font-bold text-white mb-1">{car.name}</h3>
           </div>
-          <button
-            onClick={() => setLiked (!liked)}
+          {/* <button
+            onClick={() => setLiked(!liked)}
             className="p-2 bg-white/20 rounded-full hover:bg-white/30 transition-colors"
           >
             <Heart
               size={18}
-              className={`${liked ? 'fill-red-400 text-red-400' : 'text-white'}`}
+              className={`${
+                liked ? "fill-red-400 text-red-400" : "text-white"
+              }`}
             />
-          </button>
+          </button> */}
         </div>
       </div>
 
@@ -51,13 +55,17 @@ export const RidesCards = ({car}) => {
             </div>
           </div>
 
-          {car.images.length > 1 &&
+          {car.images.length > 1 && (
             <div className="flex gap-2 mt-3 justify-center">
-              {car.images.map ((img, idx) => (
+              {car.images.map((img, idx) => (
                 <button
                   key={idx}
-                  onClick={() => setSelectedImage (idx)}
-                  className={`w-12 h-10 rounded-lg overflow-hidden border-2 transition-all ${selectedImage === idx ? 'border-red-600 scale-105' : 'border-gray-200 hover:border-gray-300'}`}
+                  onClick={() => setSelectedImage(idx)}
+                  className={`w-12 h-10 rounded-lg overflow-hidden border-2 transition-all ${
+                    selectedImage === idx
+                      ? "border-red-600 scale-105"
+                      : "border-gray-200 hover:border-gray-300"
+                  }`}
                 >
                   <img
                     src={img}
@@ -66,7 +74,8 @@ export const RidesCards = ({car}) => {
                   />
                 </button>
               ))}
-            </div>}
+            </div>
+          )}
         </div>
 
         {/* Specifications */}
@@ -106,7 +115,7 @@ export const RidesCards = ({car}) => {
             Features
           </h4>
           <div className="space-y-2">
-            {car.features.slice (0, 3).map ((feature, idx) => (
+            {car.features.slice(0, 3).map((feature, idx) => (
               <div key={idx} className="flex items-center gap-2 text-sm">
                 <CheckCircle className="text-red-600 flex-shrink-0" size={12} />
                 <span className="text-gray-700">{feature}</span>
@@ -115,8 +124,15 @@ export const RidesCards = ({car}) => {
           </div>
         </div>
 
+        <div className="flex justify-center">
+          <button className="btn-shadow-red gap-2 text-xs cursor-pointer">
+            <Car size={16} />
+            Book Now
+          </button>
+        </div>
+
         {/* Pricing & Action */}
-        <div className="bg-gradient-to-r from-black to-red-800 p-4 rounded-xl text-white">
+        {/* <div className="bg-gradient-to-r from-black to-red-800 p-4 rounded-xl text-white">
           <div className="flex justify-between items-center mb-3">
             <div>
               <p className="text-gray-300 text-xs">Starting from</p>
@@ -136,7 +152,7 @@ export const RidesCards = ({car}) => {
             <Car size={16} />
             Book Now
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

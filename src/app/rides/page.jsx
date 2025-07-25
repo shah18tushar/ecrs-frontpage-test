@@ -6,6 +6,7 @@ import { RidesCards } from '@/components/ui/RidesCards';
 import { Tabs } from '@/components/ui/Tabs';
 import Threads from '@/components/ui/Threads';
 import SplitText from '@/components/ui/SplitText';
+import CorporateMonthly from '@/components/ui/CorporateMonthly';
 const RidesPage = () => {
   const [activeTab, setActiveTab] = useState('sedan');
 
@@ -65,6 +66,11 @@ const RidesPage = () => {
           </div>
         )}
       </div>
+
+
+        {/* Corporate Monthly */}
+        <CorporateMonthly/>
+
     </div>
   );
 };

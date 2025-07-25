@@ -9,11 +9,11 @@ const PartnerWithUs = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Left Content */}
           <div className="lg:w-1/2 text-center lg:text-left">
-            <div className="mb-4 flex justify-center">
+            {/* <div className="mb-4 flex justify-center">
               <span className="inline-block px-3 py-1 text-xs font-semibold tracking-wider text-red-600 uppercase bg-red-100 rounded-full">
                 Benefits for Suppliers Partnering with ECRS
               </span>
-            </div>
+            </div> */}
             <h1 className="text-4xl md:text-xl font-bold text-center text-gray-900 leading-tight mb-4">
               Partner With Us For <br />
               <span className="text-red-500 text-xl">

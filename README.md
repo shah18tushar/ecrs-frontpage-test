@@ -1,6 +1,13 @@
 Available round the clock for your convenience
 
 
+https://www.reactbits.dev/text-animations/rotating-text
+https://www.reactbits.dev/animations/pixel-transition
+https://www.reactbits.dev/animations/ribbons
+https://www.reactbits.dev/components/flowing-menu
+
+
+in below component i want to add Car Booking Process in 5 steps , i want to take all steps into cards , in each card i want to take process and description on left and on the right i want to take image take all cards in a row an take cards width max-w-3xl or 4xl with mx-auto 
 
 
 
