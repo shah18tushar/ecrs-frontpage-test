@@ -9,7 +9,7 @@ const CoreValues = () => {
      {
        content: (
          <div className="bg-gradient-to-br from-red-500 via-red-600 to-red-700 text-white p-6 rounded-2xl shadow-2xl border border-red-400/30 backdrop-blur-sm">
-           <div className="text-2xl font-bold mb-2">🏆 Excellence</div>
+           <div className="text-2xl font-bold mb-2">Excellence</div>
            <p className="text-sm opacity-90">
              Delivering premium automotive experiences that exceed expectations
            </p>
@@ -19,7 +19,7 @@ const CoreValues = () => {
      {
        content: (
          <div className="bg-gradient-to-br from-red-600 via-red-500 to-red-700 text-white p-6 rounded-2xl shadow-2xl border border-red-400/30 backdrop-blur-sm">
-           <div className="text-2xl font-bold mb-2">🔧 Reliability</div>
+           <div className="text-2xl font-bold mb-2">Reliability</div>
            <p className="text-sm opacity-90">
              Meticulously maintained fleet ensuring seamless journeys
            </p>
@@ -29,7 +29,7 @@ const CoreValues = () => {
      {
        content: (
          <div className="bg-gradient-to-br from-red-700 via-red-600 to-red-500 text-white p-6 rounded-2xl shadow-2xl border border-red-400/30 backdrop-blur-sm">
-           <div className="text-2xl font-bold mb-2">👥 Customer First</div>
+           <div className="text-2xl font-bold mb-2">Customer First</div>
            <p className="text-sm opacity-90">
              Your satisfaction drives every decision we make
            </p>
@@ -39,7 +39,7 @@ const CoreValues = () => {
      {
        content: (
          <div className="bg-gradient-to-br from-red-500 via-red-700 to-red-600 text-white p-6 rounded-2xl shadow-2xl border border-red-400/30 backdrop-blur-sm">
-           <div className="text-2xl font-bold mb-2">🚗 Innovation</div>
+           <div className="text-2xl font-bold mb-2">Innovation</div>
            <p className="text-sm opacity-90">
              Cutting-edge technology meets traditional automotive craftsmanship
            </p>
@@ -49,7 +49,7 @@ const CoreValues = () => {
      {
        content: (
          <div className="bg-gradient-to-br from-red-600 via-red-700 to-red-500 text-white p-6 rounded-2xl shadow-2xl border border-red-400/30 backdrop-blur-sm">
-           <div className="text-2xl font-bold mb-2">💎 Integrity</div>
+           <div className="text-2xl font-bold mb-2"> Integrity</div>
            <p className="text-sm opacity-90">
              Transparent pricing, honest service, unwavering trust
            </p>
@@ -59,7 +59,7 @@ const CoreValues = () => {
      {
        content: (
          <div className="bg-gradient-to-br from-red-700 via-red-500 to-red-600 text-white p-6 rounded-2xl shadow-2xl border border-red-400/30 backdrop-blur-sm">
-           <div className="text-2xl font-bold mb-2">🌟 Luxury</div>
+           <div className="text-2xl font-bold mb-2">Luxury</div>
            <p className="text-sm opacity-90">
              Every vehicle curated for the discerning traveler
            </p>
@@ -69,7 +69,7 @@ const CoreValues = () => {
      {
        content: (
          <div className="bg-gradient-to-br from-red-500 via-red-600 to-red-700 text-white p-6 rounded-2xl shadow-2xl border border-red-400/30 backdrop-blur-sm">
-           <div className="text-2xl font-bold mb-2">⚡ Performance</div>
+           <div className="text-2xl font-bold mb-2">Performance</div>
            <p className="text-sm opacity-90">
              High-performance vehicles for extraordinary experiences
            </p>
@@ -79,7 +79,7 @@ const CoreValues = () => {
      {
        content: (
          <div className="bg-gradient-to-br from-red-600 via-red-500 to-red-700 text-white p-6 rounded-2xl shadow-2xl border border-red-400/30 backdrop-blur-sm">
-           <div className="text-2xl font-bold mb-2">🛡️ Safety</div>
+           <div className="text-2xl font-bold mb-2">Safety</div>
            <p className="text-sm opacity-90">
              Rigorous safety standards protecting every journey
            </p>
@@ -89,7 +89,7 @@ const CoreValues = () => {
      {
        content: (
          <div className="bg-gradient-to-br from-red-700 via-red-600 to-red-500 text-white p-6 rounded-2xl shadow-2xl border border-red-400/30 backdrop-blur-sm">
-           <div className="text-2xl font-bold mb-2">🌍 Sustainability</div>
+           <div className="text-2xl font-bold mb-2">Sustainability</div>
            <p className="text-sm opacity-90">
              Eco-conscious options for responsible luxury travel
            </p>
@@ -99,7 +99,7 @@ const CoreValues = () => {
      {
        content: (
          <div className="bg-gradient-to-br from-red-500 via-red-700 to-red-600 text-white p-6 rounded-2xl shadow-2xl border border-red-400/30 backdrop-blur-sm">
-           <div className="text-2xl font-bold mb-2">📞 Support</div>
+           <div className="text-2xl font-bold mb-2">Support</div>
            <p className="text-sm opacity-90">
              24/7 premium support for uninterrupted service
            </p>
@@ -109,7 +109,7 @@ const CoreValues = () => {
      {
        content: (
          <div className="bg-gradient-to-br from-red-600 via-red-700 to-red-500 text-white p-6 rounded-2xl shadow-2xl border border-red-400/30 backdrop-blur-sm">
-           <div className="text-2xl font-bold mb-2">🎯 Precision</div>
+           <div className="text-2xl font-bold mb-2">Precision</div>
            <p className="text-sm opacity-90">
              Attention to detail in every aspect of service delivery
            </p>
@@ -119,7 +119,7 @@ const CoreValues = () => {
      {
        content: (
          <div className="bg-gradient-to-br from-red-700 via-red-500 to-red-600 text-white p-6 rounded-2xl shadow-2xl border border-red-400/30 backdrop-blur-sm">
-           <div className="text-2xl font-bold mb-2">🚀 Evolution</div>
+           <div className="text-2xl font-bold mb-2">Evolution</div>
            <p className="text-sm opacity-90">
              Continuously evolving to set new industry standards
            </p>

@@ -8,7 +8,7 @@ const ContactCard = ({title, address, phones, emails, isSelected, onClick}) => {
     <div
       onClick={onClick}
       className={cn (
-        'border rounded-xl p-4 shadow-sm cursor-pointer transition-all',
+        'border rounded-xl p-4 shadow-sm cursor-pointer transition-all h-[18rem]',
         isSelected ? 'border-red-500 shadow-lg bg-red-50' : 'hover:shadow-md'
       )}
     >

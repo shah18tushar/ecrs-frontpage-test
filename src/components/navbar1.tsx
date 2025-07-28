@@ -338,7 +338,7 @@ const Navbar1 = ({
       items: [
         { title: "About Company", url: "/about/company" },
         { title: "How It Works", url: "/about/howitworks" },
-        { title: "How We Care", url: "/about/howwecare" },
+        // { title: "How We Care", url: "/about/howwecare" },
         { title: "Our Network", url: "/about/ournetwork" },
       ],
     },
@@ -401,20 +401,20 @@ const Navbar1 = ({
             {/* Auth Buttons */}
             <div className="flex gap-1">
              
-              <Button asChild className="bg-transparent text-gray-950 hover:bg-red-500 hover:rounded-full hover:text-white transition-all duration-1000">
+              <Button asChild className="rounded-full bg-red-500 text-white hover:bg-red-600 hover:text-white hover:scale-95 transition-all duration-300 cursor-pointer">
                 <Link href={auth.signup.url} className="hover:no-underline">
                   <span className="">
                     {auth.signup.title}
                   </span>
                 </Link>
               </Button>
-              <Button asChild className="bg-white border border-none cursor-pointer text-gray-950 hover:bg-red-500 hover:rounded-full hover:text-white transition-all duration-1000">
+              {/* <Button asChild className="bg-white border border-none cursor-pointer text-gray-950 hover:bg-red-500 hover:rounded-full hover:text-white transition-all duration-1000">
                 <Link href={auth.login.url} className="hover:no-underline">
                   <span className="">
                     {auth.login.title}
                   </span>
                 </Link>
-              </Button>
+              </Button> */}
                <Button 
                 onClick={() => setShowLoginPopup(true)}
                 className="rounded-full bg-red-500 text-white hover:bg-red-600 hover:text-white hover:scale-95 transition-all duration-1000 cursor-pointer"

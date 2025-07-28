@@ -18,12 +18,12 @@ export const RidesCards = ({car}) => {
   const [liked, setLiked] = useState (false);
 
   return (
-    <div className="bg-white border-2 border-gray-100 rounded-2xl shadow-lg hover:shadow-2xl w-full">
+    <div className="bg-gray-100 border border-red-600 rounded-2xl shadow-lg hover:shadow-2xl w-full">
       {/* Header */}
       <div
         className="bg-gradient-to-r from-red-500 via-black to-red-500 px-6 py-4 rounded-t-2xl"
       >
-        <div className="flex justify-center items-start">
+        <div className="flex justify-center items-start">4
           <div>
             <h3 className="text-xl font-bold text-white mb-1">{car.name}</h3>
           </div>

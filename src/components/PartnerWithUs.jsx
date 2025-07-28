@@ -1,30 +1,31 @@
 "use client";
 
 import React from "react";
+import MagnifierCursor from "./MagnifierCursor";
 
 const PartnerWithUs = () => {
+      const text = "Why Join ECRS as a Vendor ?";
+
   return (
     <section className="relative py-16">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Left Content */}
           <div className="lg:w-1/2 text-center lg:text-left">
-            {/* <div className="mb-4 flex justify-center">
-              <span className="inline-block px-3 py-1 text-xs font-semibold tracking-wider text-red-600 uppercase bg-red-100 rounded-full">
-                Benefits for Suppliers Partnering with ECRS
-              </span>
-            </div> */}
-            <h1 className="text-4xl md:text-xl font-bold text-center text-gray-900 leading-tight mb-4">
-              Partner With Us For <br />
-              <span className="text-red-500 text-xl">
-                Exclusive Offers
-              </span> &{" "}
-              <span className="text-red-500 text-xl">Exciting Benefits..!</span>
+            <h1 className="text-4xl md:text-2xl font-bold text-center text-gray-900 font-serif mb-2">
+              <MagnifierCursor text={text} cursorSize={40} />
             </h1>
+            <div className="mb-4 flex justify-center">
+              <span className="inline-block px-3 py-1 text-xs font-semibold tracking-wider text-red-600 uppercase bg-red-100 rounded-full">
+                Your Fleet - Our Platform - Unlimited Possibilities..!
+              </span>
+            </div>
             <p className="text-sm text-gray-600 mb-6 max-w-lg text-center">
-              At ECRS (Executive Car Rental Services), we believe in building
-              strong, long-term partnerships with our supplier network. Here's
-              what you gain when you join our growing ecosystem:
+              Partnering with ECRS opens the door to sustainable growth,
+              consistent business opportunities, and long-term success. As a
+              trusted name in the car rental industry, ECRS values strong
+              partnerships with reliable vendors and offers a platform where
+              your fleet and services can thrive.
             </p>
 
             <div className="flex justify-center">
@@ -48,39 +49,11 @@ const PartnerWithUs = () => {
                   </div>
                   <div>
                     <h3 className="text-sm font-medium text-gray-900">
-                      Consistent Business Opportunities
+                      Consistent Bookings
                     </h3>
                     <p className="text-gray-500 font-medium text-xs mt-1">
-                      Get access to steady demand from top corporate clients
-                      across 180+ cities, ensuring predictable revenue and
-                      long-term growth.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 mt-1">
-                    <svg
-                      className="w-6 h-6 text-red-500"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-medium text-gray-900">
-                      Pan-India Reach
-                    </h3>
-                    <p className="text-gray-500 font-medium text-xs mt-1">
-                      Expand your market presence with the backing of our
-                      national network and established brand credibility.
+                      Gain access to large and growing customer base that
+                      ensures regular demand for your vehicles.
                     </p>
                   </div>
                 </div>
@@ -107,8 +80,8 @@ const PartnerWithUs = () => {
                       Timely Payments & Transparent Terms
                     </h3>
                     <p className="text-gray-500 font-medium text-xs mt-1">
-                      We prioritize ethical business practices with clear
-                      contracts and timely payouts — no surprises, no delays.
+                      Transparent billing and prompt payments help maintain
+                      healthy cash flow for your operations.
                     </p>
                   </div>
                 </div>
@@ -132,12 +105,11 @@ const PartnerWithUs = () => {
                   </div>
                   <div>
                     <h3 className="text-sm font-medium text-gray-900">
-                      Technology Support
+                      Brand Association
                     </h3>
                     <p className="text-gray-500 font-medium text-xs mt-1">
-                      Get integrated into our GPS tracking and operations
-                      platform for real-time visibility, streamlined trip
-                      assignments, and performance tracking.
+                      Work with a reputed brand and gain credibility and trust
+                      in the industry.
                     </p>
                   </div>
                 </div>
@@ -161,41 +133,11 @@ const PartnerWithUs = () => {
                   </div>
                   <div>
                     <h3 className="text-sm font-medium text-gray-900">
-                      Training & Compliance Assistance
+                      24/7 Assistance
                     </h3>
                     <p className="text-gray-500 font-medium text-xs mt-1">
-                      We help suppliers meet fleet and driver compliance
-                      requirements through guidance, checklists, and best
-                      practices.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 mt-1">
-                    <svg
-                      className="w-6 h-6 text-red-500"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-medium text-gray-900">
-                      24/7 Partner Support
-                    </h3>
-                    <p className="text-gray-500 font-medium text-xs mt-1">
-                      Our dedicated supplier coordination team is available
-                      round-the-clock to assist with trip scheduling, emergency
-                      handling, and issue resolution.
+                      Dedicated vendor support to resolve queries and ensure
+                      smooth coordination.
                     </p>
                   </div>
                 </div>

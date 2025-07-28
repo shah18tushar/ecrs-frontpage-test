@@ -25,7 +25,7 @@ const FeaturesComponent = () => {
       icon: Shield,
       title: "Quality at Minimum Expense",
       description:
-        "Affordable luxury rentals without compromising on quality. Great cars at competitive prices.",
+        "Affordable luxury rentals without compromising on quality. Great cars at competitive prices.Discover luxury with top-quality.",
       gradient: "from-red-500 to-red-600",
       position: "top-right",
     },
@@ -292,99 +292,3 @@ const FeaturesComponent = () => {
 };
 
 export default FeaturesComponent;
-
-// import React from 'react';
-// import DotGrid from '@/components/ui/DotGrid';
-// import SplitText from '@/components/ui/SplitText';
-
-// export const features = [
-//   {
-//     id: 1,
-//     title: 'Advanced Safety',
-//     description: 'State-of-the-art safety features including collision detection, lane assist, and emergency braking systems.',
-//     image: '/carpic1.jpg',
-//   },
-//   {
-//     id: 2,
-//     title: 'Smart Technology',
-//     description: 'Integrated AI-powered infotainment system with voice control and seamless smartphone connectivity.',
-//     image: '/carpic2.jpg',
-//   },
-//   {
-//     id: 3,
-//     title: 'Eco-Friendly',
-//     description: 'Zero-emission electric powertrain with industry-leading battery efficiency and fast charging capabilities.',
-//     image: '/carpic3.jpg',
-//   },
-//   {
-//     id: 4,
-//     title: 'Premium Comfort',
-//     description: 'Luxury interior with heated seats, climate control, and noise-canceling technology.',
-//     image: '/carpic4.jpg',
-//   },
-// ];
-
-// const FeaturesSection = () => {
-//   return (
-//    <>
-//   {/* Heading outside the dot background */}
-//   <div className="mb-10 text-center">
-//     <SplitText
-//       text="Our Features"
-//       className="text-3xl md:text-5xl font-bold"
-//       delay={100}
-//       duration={0.6}
-//       ease="power3.out"
-//       splitType="chars"
-//       from={{ opacity: 0, y: 40 }}
-//       to={{ opacity: 1, y: 0 }}
-//       threshold={0.1}
-//       rootMargin="-100px"
-//     />
-//   </div>
-
-//   {/* Section with DotGrid and Cards */}
-//   <section className="w-full relative py-16 px-4">
-//     {/* DotGrid only behind this section */}
-//     <div className="w-full h-full absolute top-0 left-0 z-10">
-//       <DotGrid
-//         dotSize={8}
-//         gap={16}
-//         baseColor="#FF0000"
-//         activeColor="#000"
-//         proximity={120}
-//         shockRadius={200}
-//         shockStrength={5}
-//         resistance={700}
-//         returnDuration={1.5}
-//       />
-//     </div>
-
-//     {/* Cards Container */}
-//     <div className="relative z-20 max-w-6xl mx-auto">
-//       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-//         {features.map((feature) => (
-//           <div
-//             key={feature.id}
-//             className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 p-6 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-1 cursor-pointer h-[320px]"
-//           >
-//             <div className="w-16 h-16 rounded-full overflow-hidden mb-4 border border-white/30">
-//               <img
-//                 src={feature.image}
-//                 alt={feature.title}
-//                 className="w-full h-full object-cover"
-//               />
-//             </div>
-//             <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-//             <p className="text-sm opacity-90 leading-relaxed">{feature.description}</p>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   </section>
-// </>
-
-//   );
-// };
-
-// export default FeaturesSection;
