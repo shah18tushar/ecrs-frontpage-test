@@ -7,7 +7,7 @@ const Testimonials = () => {
     const text = "What Our Premium Clients Say";
 
   return (
-    <div className="relative pt-16 overflow-hidden">
+    <div id="testimonials" className="relative pt-16 overflow-hidden">
       {/* Premium Header Section */}
       <div className="relative z-10 text-center">
         {/* Luxury Badge */}

@@ -38,14 +38,14 @@ const GalleryPage = () => {
             threshold={0.1}
           />
           <p className="text-gray-600  max-w-2xl mx-auto text-lg">
-            Browse through our vibrant gallery of visuals and videos, each
+            Browse through our vibrant gallery of visuals , each
             telling a unique story.
           </p>
         </div>
       </section>
 
       {/* Masonry Grid Section */}
-      <section className="px-4 md:px-8 lg:px-16 -mt-16">
+      <section className="px-4 md:px-8 lg:px-16 -mt-8">
         <Masonry
           items={items}
           ease="power3.out"

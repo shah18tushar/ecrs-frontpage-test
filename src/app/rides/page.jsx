@@ -27,11 +27,11 @@ const RidesPage = () => {
         <div className="absolute inset-0 z-0">
           <Threads amplitude={1} distance={0} enableMouseInteraction={false} />
         </div>
-        
+
         {/* Centered Content - Similar to your working example */}
         <div className="relative z-10 text-center px-6">
           <SplitText
-            text="Choose Your Ride"
+            text="Choose Your Fleet"
             className="text-3xl md:text-5xl font-bold mb-4"
             delay={100}
             duration={0.6}
@@ -51,7 +51,7 @@ const RidesPage = () => {
       {/* Main Content - Unchanged from your original */}
       <div className="max-w-7xl mx-auto px-6 ">
         <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {carData[activeTab]?.map((car) => (
             <RidesCards key={car.id} car={car} />
@@ -61,16 +61,20 @@ const RidesPage = () => {
         {(!carData[activeTab] || carData[activeTab].length === 0) && (
           <div className="text-center py-16">
             <Car className="mx-auto text-gray-400 mb-4" size={64} />
-            <h3 className="text-2xl font-bold text-gray-600 mb-2">No vehicles available</h3>
-            <p className="text-gray-500">Cars in this category will be available soon.</p>
+            <h3 className="text-2xl font-bold text-gray-600 mb-2">
+              No vehicles available
+            </h3>
+            <p className="text-gray-500">
+              Cars in this category will be available soon.
+            </p>
           </div>
         )}
       </div>
 
-
+      <div id="packages">
         {/* Corporate Monthly */}
-        <CorporateMonthly/>
-
+        <CorporateMonthly />
+      </div>
     </div>
   );
 };
