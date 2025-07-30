@@ -1,6 +1,6 @@
 export const offices = [
   {
-    title: "Corporate Office (Communication)",
+    title: "Corporate Office - Akurdi (Communication)",
     address: `Office No. 429 A/B & 430 A/B/C/D, 4th Floor, A Wing, Jai Ganesh Vision, Akurdi Pune. Pin code: 411035.`,
     phones: ["020-4691 9191", "020-4691 9181", "020-4691 9174"],
     emails: [
@@ -21,7 +21,7 @@ export const offices = [
     lng: 73.762, // Chinchwad
   },
   {
-    title: "Branch Office - Near Mumbai Airport",
+    title: "Branch Office - Mumbai (Operations)",
     address:
       "1 Aerocity, Office No. 7022, 7th Floor , Sakinaka, Andheri East, Mumbai – 400072.",
     phones: ["+91 7507774029", "+91 7507774030"],
@@ -30,7 +30,7 @@ export const offices = [
     lng: 72.887, // Sakinaka Mumbai
   },
   {
-    title: "Branch Office - Near Pune Airport",
+    title: "Branch Office - Pune (Operations)",
     address:
       "Opp. SR No. 240 / A, Puru Housing Society, Five Nine Chowk, Pune – 411 032.",
     phones: ["020-27401212", "+91 9860444816"],

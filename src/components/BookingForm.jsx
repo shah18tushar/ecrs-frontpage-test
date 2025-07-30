@@ -7,7 +7,7 @@ const VideoParallax = () => {
   const videoContainerRef = useRef(null);
   const contentRef = useRef(null);
 
-  const text = " Discover the";
+  const text = "Discovering the";
   const text1 = "World on Wheels.";
 
   return (
@@ -50,17 +50,17 @@ const VideoParallax = () => {
                 Luxury Fleet
               </h3>
               <p className="font-light">
-                From Rolls-Royce to Bentley, experience automotive perfection
-                with our hand-picked collection.
+                Our luxury fleet delivers a superior travel experience tailored
+                for executives, VIP guests, and premium clients.
               </p>
             </div>
             <div className="p-6 border-l-4 border-gold-500">
               <h3 className="text-xl font-serif mb-3 text-gold-500">
-                24/7 Service
+                24/7 Operations
               </h3>
               <p className="font-light">
-                Our concierge team is available around the clock to ensure
-                seamless luxury experiences.
+                We operate round the clock to ensure your travel needs are met
+                anytime, anywhere. Our team is always ready.
               </p>
             </div>
             <div className="p-6 border-l-4 border-gold-500">
@@ -68,8 +68,9 @@ const VideoParallax = () => {
                 Experienced Chauffeurs
               </h3>
               <p className="font-light">
-                Pick up in one city, drop off in another. Our network spans
-                across major destinations.
+                Our chauffeurs are professionally trained, well-groomed, and
+                experienced. They ensure a safe, smooth, and premium travel
+                experience every time.
               </p>
             </div>
           </div>

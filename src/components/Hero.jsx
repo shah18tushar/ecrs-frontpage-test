@@ -424,323 +424,49 @@
 
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
-import { ChevronRight, ChevronDown, Car, Sparkles } from "lucide-react";
+import React, { useEffect, useRef } from "react";
+import { ChevronRight } from "lucide-react";
 
 const Hero = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-  const [selectedVehicle, setSelectedVehicle] = useState("");
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const heroRef = useRef(null);
-  const dropdownRef = useRef(null);
   const videoRef = useRef(null);
-
-  const heroSlides = [
-    {
-      video: "./hero_video.mp4", // Update this with your video path
-      title: "Corporate Car Rental Services -   Reliable Travel Partner",
-      subtitle: "Executive Car Rental Services",
-      description: "Experience Premium Car Rentals",
-    },
-  ];
-
-  const vehicleOptions = [
-    { value: "sedan", label: "Sedan", icon: <Car className="w-4 h-4" /> },
-    { value: "xuv", label: "XUV", icon: <Car className="w-4 h-4" /> },
-    {
-      value: "premium",
-      label: "Premium",
-      icon: <Sparkles className="w-4 h-4" />,
-    },
-    { value: "bus", label: "Bus", icon: <Car className="w-4 h-4" /> },
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    // Since we only have one video, we don't need the slideshow timer
-    // But keeping it in case you want to add more videos later
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
 
   useEffect(() => {
     // Try to autoplay the video
     if (videoRef.current) {
       videoRef.current.play().catch((error) => {
         console.log("Autoplay prevented:", error);
-        // You might want to add a play button overlay here
       });
     }
   }, []);
 
-  useEffect(() => {
-    if (!isDropdownOpen) return;
-    function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsDropdownOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [isDropdownOpen]);
-
   return (
     <div
       id="bookNow"
-      className="relative lg:h-[100vh] overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-900"
+      className="relative h-[15rem] md:mt-0 mt-10 md:h-screen w-full overflow-hidden"
     >
       {/* Video Background */}
-      <div className="absolute inset-0">
-        {heroSlides.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentSlide ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <div className="absolute inset-0 z-20" />
-            <video
-              ref={videoRef}
-              src={slide.video}
-              className="w-full h-full object-cover brightness-[0.9]"
-              muted
-              loop
-              playsInline
-            />
-          </div>
-        ))}
-      </div>
-      {/* Main Content */}
-      <div className="relative z-40 min-h-screen flex items-center pt-20">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="flex items-center justify-end">
-            
-
-            {/* Right Content - Booking Form (Kept exactly as original) */}
-            <div
-              className={`lg:ml-8 mt-1 transform transition-all duration-1000 delay-1000 ${
-                isVisible
-                  ? "translate-x-0 opacity-100"
-                  : "translate-x-12 opacity-0"
-              }`}
-            >
-              <div className="relative">
-                {/* Floating Card */}
-                <div className="bg-white/10 backdrop-blur-2xl rounded-2xl p-4 border border-white/40 shadow-2xl hover:shadow-red-500/20 max-w-md mx-auto">
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <div className="bg-red-600 p-2 rounded-full">
-                        <Car className="w-7 h-7 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-sm font-semibold tracking-wide text-white">
-                          Book a Ride
-                        </h3>
-                        <p className="text-white/70 text-xs font-medium">
-                          Economical | Efficient | Dependable
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="space-y-3">
-                      <div className="grid grid-cols-2 gap-2">
-                        <div>
-                          <label className="block text-xs font-semibold text-white mb-1">
-                            Guest Name
-                          </label>
-                          <input
-                            type="text"
-                            className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                          />
-                        </div>
-                        <div>
-                          <label className="block text-xs font-semibold text-white mb-1">
-                            Surname
-                          </label>
-                          <input
-                            type="text"
-                            className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="grid grid-cols-2 gap-2">
-                        <div>
-                          <label className="block text-xs font-semibold text-white mb-1">
-                            Mobile Number
-                          </label>
-                          <input
-                            type="text"
-                            className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                          />
-                        </div>
-                        <div>
-                          <label className="block text-xs font-semibold text-white mb-1">
-                            Email ID
-                          </label>
-                          <input
-                            type="text"
-                            className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="grid grid-cols-2 gap-2">
-                        <div>
-                          <label className="block text-xs font-semibold text-white mb-1">
-                            From City
-                          </label>
-                          <input
-                            type="text"
-                            className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                          />
-                        </div>
-                        <div>
-                          <label className="block text-xs font-semibold text-white mb-1">
-                            To City
-                          </label>
-                          <input
-                            type="text"
-                            className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="grid grid-cols-2 gap-2">
-                        <div>
-                          <label className="block text-xs font-semibold text-white mb-1">
-                            Pickup Location
-                          </label>
-                          <input
-                            type="text"
-                            className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                          />
-                        </div>
-                        <div className="relative" ref={dropdownRef}>
-                          <label className="block text-xs font-semibold text-white mb-1">
-                            Vehicle Type
-                          </label>
-                          <div className="relative">
-                            <button
-                              type="button"
-                              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                              className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent flex items-center justify-between"
-                            >
-                              <span
-                                className={
-                                  selectedVehicle
-                                    ? "text-white"
-                                    : "text-gray-400"
-                                }
-                              >
-                                {selectedVehicle || "Select Vehicle"}
-                              </span>
-                              <ChevronDown
-                                className={`w-3 h-3 transition-transform duration-200 ${
-                                  isDropdownOpen ? "rotate-180" : ""
-                                }`}
-                              />
-                            </button>
-                            {isDropdownOpen && (
-                              <div className="absolute top-full left-0 right-0 mt-1 bg-red-600 border border-white/20 rounded-lg shadow-lg z-50">
-                                {vehicleOptions.map((option) => (
-                                  <button
-                                    key={option.value}
-                                    type="button"
-                                    onClick={() => {
-                                      setSelectedVehicle(option.label);
-                                      setIsDropdownOpen(false);
-                                    }}
-                                    className="w-full px-3 py-2 text-xs text-left text-white font-medium    hover:bg-white hover:text-red-500 first:rounded-t-lg last:rounded-b-lg transition-colors duration-200"
-                                  >
-                                    {option.label}
-                                  </button>
-                                ))}
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="grid grid-cols-3 gap-2">
-                        <div>
-                          <label className="block text-xs font-semibold text-white mb-1">
-                            Pickup Time
-                          </label>
-                          <input
-                            type="time"
-                            className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                          />
-                        </div>
-                        <div>
-                          <label className="block text-xs font-semibold text-white mb-1">
-                            Journey Start Date
-                          </label>
-                          <input
-                            type="date"
-                            className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                          />
-                        </div>
-                        <div>
-                          <label className="block text-xs font-semibold text-white mb-1">
-                            Journey End Date
-                          </label>
-                          <input
-                            type="date"
-                            className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-xs focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="flex justify-center">
-                        <button className="btn-shadow-red text-xs font-semibold cursor-pointer">
-                          Submit Enquiry
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Floating Elements */}
-                <div className="absolute -top-4 -right-4 w-16 h-16 bg-red-500/30 rounded-full blur-xl animate-pulse" />
-                <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-red-500/20 rounded-full blur-lg animate-pulse delay-1000" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Slide Indicators - Removed since we only have one video */}
-      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-40">
-        <div className="flex gap-3">
-          {heroSlides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide
-                  ? "bg-red-500 w-8"
-                  : "bg-white/30 hover:bg-white/50"
-              }`}
-            />
-          ))}
-        </div>
-      </div> */}
+      <video
+        ref={videoRef}
+        src="./hero_video.mp4"
+        className="absolute inset-0 w-full h-full object-contain md:object-cover"
+        muted
+        loop
+        playsInline
+        autoPlay
+      />
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-8 z-50">
-        <div className="flex flex-col items-center gap-2 text-white/60">
-          <span className="text-sm font-medium rotate-90 origin-center">
+      <div className="hidden lg:absolute lg:bottom-8 lg:right-6 lg:z-30 lg:flex lg:flex-col lg:items-center lg:gap-2 text-white/70">
+        <div className="flex flex-col items-center gap-2 text-white/70">
+          <span className="text-sm font-medium rotate-90 origin-center whitespace-nowrap">
             Scroll
           </span>
-          <div className="w-px h-12 bg-gradient-to-b from-white/60 to-transparent" />
+          <div className="w-px h-12 bg-gradient-to-b from-white/70 to-transparent" />
           <ChevronRight className="w-4 h-4 rotate-90" />
         </div>
       </div>
     </div>
   );
 };
+
 export default Hero;

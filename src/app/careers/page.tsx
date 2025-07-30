@@ -19,7 +19,7 @@ export default function CareersPage() {
      
         <div className="text-black">
             {/* Hero Section with Threads */}
-            <section className="relative w-full h-[350px] md:h-[300px] mt-6 overflow-hidden flex items-center justify-center bg-white">
+            {/* <section className="relative w-full h-[350px] md:h-[300px] mt-6 overflow-hidden flex items-center justify-center bg-white">
                 <div className=''>
                 <div className="absolute inset-0 z-0">
                     <Threads amplitude={1} distance={0} enableMouseInteraction={false} />
@@ -40,9 +40,10 @@ export default function CareersPage() {
                     </p>
                 </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Careers Banner */}
+            <div className='mt-24'></div>
             <CareersBanner />
 
             {/* Careers Post Section */}

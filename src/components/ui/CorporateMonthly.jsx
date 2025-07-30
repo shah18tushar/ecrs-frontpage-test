@@ -45,10 +45,10 @@ const packages = [
 const CorporateMonthly = () => {
   return (
     <div className="pt-10">
-      <section className="relative bg-gray-950 overflow-hidden max-w-7xl mx-auto">
-        <div className="max-w-6xl mx-auto relative z-10 py-14 px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gray-950 overflow-hidden w-full">
+        <div className="max-w-7xl mx-auto relative z-10 py-14 px-4">
           <div className="text-center mb-24">
-            <h2 className="text-4xl font-semibold mb-3 font-serif text-red-500 animate-pulse">
+            <h2 className="text-4xl font-semibold mb-3 font-serif text-red-500 animate-">
               Corporate{" "}
               <span className="underline underline-offset-8"> Monthly </span>
               Packages
@@ -135,10 +135,10 @@ const CorporateMonthly = () => {
                     </div>
 
                     <button
-                      className={`w-full py-4 px-6 rounded-lg cursor-pointer font-medium transition-all duration-1000 ${
+                      className={`w-full py-4 px-6 rounded-lg cursor-pointer font-bold transition-all duration-1000 ${
                         pkg.popular
-                          ? "bg-gradient-to-r from-red-600 to-red-800 hover:from-gray-700 hover:to-gray-900 shadow-lg hover:text-white hover:shadow-xl hover:shadow-red-900/30"
-                          : "bg-gray-800 hover:bg-red-700 hover:text-white border border-gray-700 hover:border-gray-600"
+                          ? "bg-gradient-to-r from-red-600 to-red-800 hover:from-gray-700 hover:to-gray-900 shadow-lg text-white hover:shadow-xl hover:shadow-red-900/30 "
+                          : "bg-gray-800 hover:bg-red-700 text-white border border-gray-700 hover:border-gray-600"
                       }`}
                     >
                       Get This Plan

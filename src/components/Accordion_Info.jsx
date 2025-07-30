@@ -14,10 +14,6 @@
 
 //   return (
 //     <section className="py-10 relative">
-//       {/* Background Design */}
-//       <div className="absolute inset-0 -z-10">
-//         <div className="h-full w-full bg-gradient-to-t from-red-400 to-transparent rounded-full opacity-10" />
-//       </div>
 
 //       <div className="container mx-auto px-6">
 //         {/* Heading Section */}
@@ -122,6 +118,22 @@
 //     </section>
 //   );
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

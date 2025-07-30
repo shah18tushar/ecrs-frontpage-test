@@ -8,7 +8,6 @@ import BookingForm from "../components/BookingForm";
 import Achievements from "@/components/achievements";
 import Accordion_Info from "@/components/Accordion_Info";
 import Testimonials from "@/components/Testimonials";
-import AppInfo from "@/components/AppInfo";
 
 export default function Frontpage() {
   return (
@@ -56,9 +55,6 @@ export default function Frontpage() {
           <Accordion_Info />
         </section>
 
-        <section className="pt-10 pb-0">
-          <AppInfo />
-        </section>
       </div>
     </div>
   );
