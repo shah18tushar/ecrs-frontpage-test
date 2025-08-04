@@ -9,7 +9,7 @@ export const carData = {
       price: 2499,
       hourlyPrice: 999,
       images: [
-        "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=600&h=400&fit=crop",
+        "/1.png",
         "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600&h=400&fit=crop",
         "https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?w=600&h=400&fit=crop",
       ],
@@ -32,13 +32,13 @@ export const carData = {
     },
     {
       id: 2,
-      name: "Honda City",
+      name: "Innova Hycross",
       rating: 4.7,
       reviews: 89,
       price: 2799,
       hourlyPrice: 1199,
       images: [
-        "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=600&h=400&fit=crop",
+        "/2.png",
         "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600&h=400&fit=crop",
       ],
       specifications: {
@@ -189,7 +189,7 @@ export const carData = {
       price: 5999,
       hourlyPrice: 2499,
       images: [
-        "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&h=400&fit=crop",
+        "/6.png",
         "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&h=400&fit=crop",
       ],
       specifications: {
