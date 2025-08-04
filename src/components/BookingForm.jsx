@@ -95,7 +95,7 @@ const VideoParallax = () => {
         </div>
 
         {/* Luxury assurance badge */}
-        <div className="absolute right-12 bottom-12 hidden lg:block">
+        {/* <div className="absolute right-12 bottom-12 hidden lg:block">
           <div className="flex flex-col items-end">
             <span className="text-sm tracking-widest mb-1">TRUSTED BY</span>
             <div className="flex gap-4">
@@ -104,7 +104,7 @@ const VideoParallax = () => {
               <span className="text-xs opacity-80">VIP CLIENTS</span>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
